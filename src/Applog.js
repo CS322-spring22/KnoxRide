@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import LoginForm from './components/LoginForm';
-
-
-function App() {
+function Applog() {
   const adminUser = {
     email: "User@gmail.com",
     password: "User123"
@@ -33,7 +31,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="Applog">
       {(user.email != "") ? (
         <div className="welcome">
           <h2>Hello,<span>{user.name}</span></h2>
@@ -47,4 +45,4 @@ function App() {
   );
       }
 
-export default App;
+export default Applog;
