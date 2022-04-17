@@ -1,4 +1,4 @@
-.header {
+.driver_header {
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
@@ -21,10 +21,12 @@
 .avatar {
   display: flex;
   align-items: center;
+  margin-left: 5px;
 }
 
-.avatar > h4 {
+.avatar > h3 {
   margin-left: 5px;
+  color: white;
 }
 
 .header_center {
@@ -41,6 +43,8 @@
   margin-left: 10px;
   border-radius: 999px;
   width: 500px;
+  top: 25%;
+  position: absolute;
 }
 
 .searchBar > input {

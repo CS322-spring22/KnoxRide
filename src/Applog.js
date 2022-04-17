@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import LoginForm from './components/LoginForm';
+import './loginindex.css';
+
 function Applog() {
   const adminUser = {
     email: "User@gmail.com",
