@@ -1,7 +1,6 @@
-.header {
-  padding: 15px 20px;
+.driver_header {
+  padding: 5px 20px;
   display: flex;
-  justify-content: space-between;
   position: sticky;
   top: 0;
   background-color: #4f3276;
@@ -21,10 +20,12 @@
 .avatar {
   display: flex;
   align-items: center;
+  margin-left: 5px;
 }
 
-.avatar > h4 {
+.avatar > h3 {
   margin-left: 5px;
+  color: white;
 }
 
 .header_center {
@@ -38,9 +39,11 @@
   align-items: center;
   background-color: #eff2f5;
   padding: 10px;
-  margin-left: 10px;
   border-radius: 999px;
   width: 500px;
+  margin: auto;
+  top: 18%;
+  position: absolute;
 }
 
 .searchBar > input {
@@ -55,4 +58,11 @@
 
 .header_right_option {
   color: white;
+}
+
+.header_right_option:hover {
+  border-radius: 80%;
+  background-color: #7e38b7;
+  padding: 5px;
+  filter: brightness(1.2);
 }

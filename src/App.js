@@ -1,16 +1,20 @@
 import React from 'react';
 import './App.css';
-import Header from "./Header";
+import DriverHeader from './DriverHeader';
 import RoutesController from './RoutesController';
-//import HomePage from "./HomePage";
+import { useLocation } from 'react-router-dom';
 
 function App() {
+  const noDriverHeaderArray = ['/login', '/homepage'];
+  const { pathname } = useLocation();
+  
   return (
     <div className="app">
+      {noDriverHeaderArray.includes(pathname) ? null : <DriverHeader />}
+      
        <div className="app_body">
          <RoutesController />
        </div>
-
     </div>
   );
 }
