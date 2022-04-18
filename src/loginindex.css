@@ -39,7 +39,7 @@ form:after {
   right: -5px;
   bottom: -5px;
   z-index: 1;
-  background-image: linear-gradient(to bottom right, #ffce00, #eb6f0a);
+  /*background-image: linear-gradient(to bottom right, #ffce00, #eb6f0a);*/
 }
 
 form .form-inner {
