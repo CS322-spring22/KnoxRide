@@ -8,7 +8,7 @@ function Feed() {
             <div className="feed_body">
                 <GeneralPost 
                     profilePic = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYxJgOaEW2kENd4kgRyKELV8Z34RkQVEeECjMV49t71dBdJY51hcu6CZ7-smMrM1sY-I8&usqp=CAU"
-                    message = 'I need a ride through this week'
+                    message = ' "/login" to visit login page, "/homepage" to visit home page' 
                     timestamp = "Monday"
                     username = 'Money Lisa'
                     image = "https://ih1.redbubble.net/image.1099621303.4631/poster,504x498,f8f8f8-pad,600x600,f8f8f8.jpg"
