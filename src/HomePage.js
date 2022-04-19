@@ -10,13 +10,13 @@ function HomePage() {
             </nav>
             <ul className="nav-menu">
                 <li className="nav-item">
-                    <a href="#" className="nav-link">Make a Request</a>
+                    <a href="/request" className="nav-link">Make a Request</a>
                 </li>
                 <li className="nav-item">
                     <a href="#" className="nav-link">History</a>
                 </li>
                 <li className="nav-item">
-                    <a href="#" className="nav-link">Become a Driver</a>
+                    <a href="/" className="nav-link">Become a Driver</a>
                 </li>
                 <li className="nav-item">
                     <a href="#" className="nav-link">Contact Us</a>
