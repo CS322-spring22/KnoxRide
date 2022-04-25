@@ -23,24 +23,24 @@ const localizer = dateFnsLocalizer({
 })
 
 const events = [
-    {
-        title: "Big Meeting", 
-        allDay: true, 
-        start: new Date(2022,4,23),
-        end: new Date(2022,6,2)
-    },
+    // {
+    //     title: "Big Meeting", 
+    //     allDay: true, 
+    //     start: new Date(2022,4,23),
+    //     end: new Date(2022,6,2)
+    // },
 
-    {
-        title: "Vacation", 
-        start: new Date(2022, 6, 0),
-        end: new Date(2022, 7, 0)
-    },
+    // {
+    //     title: "Vacation", 
+    //     start: new Date(2022, 6, 0),
+    //     end: new Date(2022, 7, 0)
+    // },
 
-    {
-        title: "Conference", 
-        start: new Date(2022, 8, 0),
-        end: new Date(2022, 9, 0)
-    }
+    // {
+    //     title: "Conference", 
+    //     start: new Date(2022, 8, 0),
+    //     end: new Date(2022, 9, 0)
+    // }
 ]
 function DriverSchedulePage() {
     const [newEvent, setNewEvent] = useState({title: "", start: "", end: ""})
@@ -63,7 +63,7 @@ function DriverSchedulePage() {
                 <DatePicker placeholderText="Start Date" style={{marginRight: "10px"}}
                 selected={newEvent.start} onChange={(start) => setNewEvent({...newEvent, start})}
                 />
-                <DatePicker placeholderText="End Date" style={{marginRight: "10px"}}
+                <DatePicker placeholderText="End Date"
                 selected={newEvent.end} onChange={(end) => setNewEvent({...newEvent, end})}
                 />
                 <button style={{marginTop: "10px"}} onClick={handleAddEvent}>
@@ -79,7 +79,7 @@ function DriverSchedulePage() {
                 style={{height: 500, margin: "50px"}}
                 />
         </div>
-    )
+    );
 }
 
 export default DriverSchedulePage
