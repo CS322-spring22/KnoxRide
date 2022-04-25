@@ -1,11 +1,9 @@
 import React from 'react'
 import {Route, Routes} from 'react-router-dom';
 import DriverFeed from './DriverNewsFeed/DriverFeed';
-import DriverProfilePage from './DriverProfile/DriverProfilePage';
 import DriverSchedulePage from './DriverSchedule/DriverSchedulePage';
 import HomePage from './HomePage';
 import Applog from './Applog';
-import DriverSchedulePage from './DriverSchedule/DriverSchedulePage';
 function RoutesController() {
     return (
         
