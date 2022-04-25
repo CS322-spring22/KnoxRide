@@ -1,12 +1,14 @@
-import './HomePage.css';
-import logo from './logopic.jpg';
+import './userHomePage.css';
+import logo from './logopic.png';
 function HomePage() {
   return (
-    <div className="App">
-      <header className="header">
-        <nav className="navbar">
+    <div className="AppUser">
+      <header className="headerUser">
+        <nav className="navbarUser">
             <nav className = 'logopic' >
+            <a href="/homepage">
             <img src={logo} alt="logo" />
+            </a>
             </nav>
             <ul className="nav-menu">
                 <li className="nav-item">
@@ -19,7 +21,7 @@ function HomePage() {
                     <a href="/" className="nav-link">Become a Driver</a>
                 </li>
                 <li className="nav-item">
-                    <a href="#" className="nav-link">Contact Us</a>
+                    <a href="/contact" className="nav-link">Contact Us</a>
                 </li>
                 <li className = "nav-item">
                     <a href = '#' className = 'nav-link'>My Account</a>
@@ -30,15 +32,15 @@ function HomePage() {
             </ul>
         </nav>
 </header>
-<div className="row">
-  <div className="column">
+<div className="rowHome">
+  <div className="columnHome">
   <h1>MY REQUESTS</h1>
   </div>
   
-  <div className="column">
+  <div className="columnHome">
   <h1>PENDING</h1>
   </div>
-  <div className="column">
+  <div className="columnHome">
   <h1>SOMETHING HERE</h1>
   </div>
 </div> 

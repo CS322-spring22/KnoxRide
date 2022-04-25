@@ -6,11 +6,11 @@
   box-sizing: border-box;
 }
 
-.App > html {
+.AppUser > html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
 }
-
+/*
 li {
   list-style: none;
 }
@@ -18,83 +18,78 @@ li {
 a {
   text-decoration: none;
 }
-.header {
-  border-bottom: 8px solid #05336e;
+*/
+.headerUser {
+  border-bottom: 10px solid #05336e;
+ /* background-color: #1d65ac; */
 }
-img {
+img.userLogo {
   width: auto;
   max-height: 100%;
 }
 
-.navbar {
+.navbarUser {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.5rem;
+  align-items: flex;
+  padding: 1rem 1rem;
   max-height: 100%;
   max-width: 100%;
+  background-color:#ffb6e1;
 }
-img {
-  max-width: 100%;
-  max-height: 100%;
+img.userLogo {
+  max-width: 120%;
+  max-height: 120%;
 }
 .logopic {
   height: 50px;
   width: 50px;
 }
 
-.hamburger {
-  display: none;
-}
-
 .bar {
   display: block;
-  width: 25px;
-  height: 3px;
+  width: 20px;
+  height: 20px;
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #101010;
+  background-color: #6e88d8;
 }
 
 .nav-menu {
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   align-items: center;
+  
 }
 
 .nav-item {
-  margin-left: 5rem;
+  list-style: none;
+  margin-left: 1rem;
+  text-align: center;
+
+  
 }
 
 .nav-link {
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: #475569;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #190060;
+  text-align: center;
 }
-
+.nav-item:hover{
+  background-color: #84f5ff;
+  color:#d20606;
+}
+/*
 .nav-link:hover {
-  color: #482ff7;
+  color: #ffffff; 
+  background-color: #eca310; 
 }
-
+*/
 .nav-logo {
   font-size: 2.1rem;
   font-weight: 500;
-  color: #ff102c;
-}
-.column {
-  float: left;
-  width: 33.33%;
-  text-align: center;
-  background-color: #ccd1d6;
-  width: 16.68%;
-  border: 1px solid black;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-  width: 100px;
+  color: #e0364a;
 }
