@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import DriverHeader from './DriverHeader';
+import DriverHeader from './DriverNewsFeed/DriverHeader';
 import RoutesController from './RoutesController';
 import { useLocation } from 'react-router-dom';
 

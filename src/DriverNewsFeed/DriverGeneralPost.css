@@ -1,4 +1,4 @@
-.generalPost {
+.driverGeneralPost {
   width: 100%;
   margin-top: 15px;
   border-radius: 15px;
@@ -6,37 +6,37 @@
   box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
 }
 
-.genPost_top {
+.driver_genPost_top {
   display: flex;
   position: relative;
   align-items: center;
   padding: 15px;
 }
 
-.genPost_avatar {
+.driver_genPost_avatar {
   margin-right: 10px;
 }
 
-.genPost_topInfo > h3 {
+.driver_genPost_topInfo > h3 {
   font-size: medium;
 }
 
-.genPost_topInfo > p {
+.driver_genPost_topInfo > p {
   font-size: small;
   color: gray;
 }
 
-.genPost_bottom {
+.driver_genPost_bottom {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 15px 20px;
 }
 
-.genPost_image > img {
+.driver_genPost_image > img {
   width: 100%;
 }
 
-.genPost_options {
+.driver_genPost_options {
   padding-top: 10px;
   border-top: 1px solid lightgray;
   display: flex;
@@ -47,7 +47,7 @@
   padding: 15px;
 }
 
-.genPost_option {
+.driver_genPost_option {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,11 +55,11 @@
   flex: 1;
 }
 
-.genPost_option > p {
+.driver_genPost_option > p {
   margin-left: 10px;
 }
 
-.genPost_option:hover {
+.driver_genPost_option:hover {
   background-color: #eff2f5;
   border-radius: 10px;
 }
