@@ -5,13 +5,13 @@
   font-family: Montserrat, sans-serif;
 }
 
-input,
+/* input,
 button {
   appearance: none;
   background: none;
   border: none;
   outline: none;
-}
+} */
 
 .Applog {
   height: 100vh;
@@ -19,7 +19,6 @@ button {
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(to bottom right, #81089f, #030948);
-  /*background-color: rgb(125, 5, 155)*/
 }
 .Applog-logo {
   height: 18vh;

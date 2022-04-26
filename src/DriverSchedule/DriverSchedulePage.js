@@ -1,14 +1,18 @@
 import React, {useState} from 'react'
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import {format} from 'date-fns';
+// import {format} from 'date-fns';
+import format from 'date-fns/format';
 import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
 import getDay from "date-fns/getDay";
 import './DriverSchedulePage.css';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
+import TimePicker from 'react-time-picker';
+// import "react-time-picker/dist/TimePicker.css";
+// import "react-clock/dist/Clock.css";
+// import TimePicker from 'react-time-picker/dist/entry.nostyle';
 
 const locales = {
     "en-US": require("date-fns/locale/en-US")
@@ -19,7 +23,7 @@ const localizer = dateFnsLocalizer({
     parse, 
     startOfWeek, 
     getDay, 
-    locales
+    locales,
 })
 
 const events = [
@@ -27,21 +31,22 @@ const events = [
     //     title: "Big Meeting", 
     //     allDay: true, 
     //     start: new Date(2022,4,23),
-    //     end: new Date(2022,6,2)
+    //     end: new Date(2022,6,2),
     // },
 
     // {
     //     title: "Vacation", 
     //     start: new Date(2022, 6, 0),
-    //     end: new Date(2022, 7, 0)
+    //     end: new Date(2022, 7, 0),
     // },
 
     // {
     //     title: "Conference", 
     //     start: new Date(2022, 8, 0),
-    //     end: new Date(2022, 9, 0)
-    // }
-]
+    //     end: new Date(2022, 9, 0),
+    // },
+];
+
 function DriverSchedulePage() {
     const [newEvent, setNewEvent] = useState({title: "", start: "", end: ""})
     const [allEvents, setAllEvents] = useState(events)
@@ -52,12 +57,9 @@ function DriverSchedulePage() {
 
     return (
         <div className="driver_schedule">
-            <h1>Calendar</h1>
-
-            <h2>Add New Event</h2>
-
+            <h1>Schedule</h1>
             <div>
-                <input className="event_title" type="text" placeholder="Add Title" style={{width: "20%", marginRight: "10px"}}
+                <input type="text" placeholder="Add Title" style={{width: "20%", marginRight: "10px"}}
                 value={newEvent.title} onChange={(e) => setNewEvent({...newEvent, title: e.target.value})}
                 />
                 <DatePicker placeholderText="Start Date" style={{marginRight: "10px"}}
@@ -66,6 +68,8 @@ function DriverSchedulePage() {
                 <DatePicker placeholderText="End Date"
                 selected={newEvent.end} onChange={(end) => setNewEvent({...newEvent, end})}
                 />
+                <TimePicker />
+                <TimePicker />
                 <button style={{marginTop: "10px"}} onClick={handleAddEvent}>
                     Add Event
                 </button>
