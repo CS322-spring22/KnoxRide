@@ -61,6 +61,12 @@ function DriverHeader() {
 
                 <IconButton>
                     <ArrowDropDownIcon fontSize="large" className="driver_header_right_option"/>
+                    {/* options inside drop down menu:
+                    1. account (edit information in profile page) 
+                    2. ride history (future rides, Now, Past rides)
+                    3. settings
+                    4. log out 
+                    */}
                 </IconButton>
             </div>           
         </div>
