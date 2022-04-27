@@ -58,45 +58,49 @@ function Request() {
         <h1 className="Req">Car Booking Form</h1>
       </div>
       <form className="Req" onSubmit={handleSubmit(onSubmit)}>
-        <div className="item">
-          <p>Name</p>
+        <div className="itemReq">
+          <p className="Req">Name</p>
           <div className="name-item">
             <input
               className="Req"
               type="text"
+              name="name"
               placeholder="First name"
               {...register("First name", { required: true, maxLength: 20 })}
             />
             <input
               className="Req"
               type="text"
+              name="name"
               placeholder="Last name"
               {...register("Last name", { required: true, maxLength: 20 })}
             />
           </div>
         </div>
-        <div className="item">
-          <p>Email</p>
+        <div className="itemReq">
+          <p className="Req">Email</p>
           <input
             className="Req"
+            name="name"
             type="text"
             placeholder="Email"
             {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
           />
         </div>
 
-        <div className="item">
-          <p>Phone Number</p>
+        <div className="itemReq">
+          <p className="Req">Phone Number</p>
           <input
             className="Req"
+            name="name"
             type="tel"
             placeholder="Phone Number"
             {...register("Phone Number", { required: true, maxLength: 10 })}
           />
         </div>
 
-        <div className="item">
-          <p>Number of Passengers</p>
+        <div className="itemReq">
+          <p className="Req">Number of Passengers</p>
 
           <input
             className="Req"
@@ -110,6 +114,8 @@ function Request() {
             })}
           />
         </div>
+
+        {/*
         <div className="question">
           <p>Vehicle</p>
           <div className="question-answer">
@@ -171,80 +177,180 @@ function Request() {
             </div>
           </div>
         </div>
-        {/*<div className="question">
-          <p>Vehicle</p>
-          <div className="question-answer"></div>
-          <div>
-            <input
-              {...register("Vehicle Type", { required: true })}
-              type="radio"
-              value="Compact"
-            />
-          </div>
-          <div>
-            <input
-              {...register("Vehicle Type", { required: true })}
-              type="radio"
-              value="SUV"
-            />
-          </div>
-          <input
-            {...register("Vehicle Type", { required: true })}
-            type="radio"
-            value="Van"
-          />
-          <input
-            {...register("Vehicle Type", { required: true })}
-            type="radio"
-            value="Pickup"
-          />
-          <input
-            {...register("Vehicle Type", { required: true })}
-            type="radio"
-            value="other:"
-          />
-        </div>
           */}
 
-        <input
-          type="datetime-local"
-          placeholder="Pick Up Date + Time"
-          {...register("Pick Up Date + Time", { required: true })}
-        />
+        <div className="questionReq">
+          <p className="Req">Vehicle</p>
+          <div className="question-answerReq">
+            <div>
+              <input
+                {...register("Vehicle Type", { required: true })}
+                type="radio"
+                value="Compact"
+                id="radio_1"
+                name="vehicle"
+              />
+              <label htmlFor="radio_1" className="radio">
+                <span>Compact</span>
+              </label>
+            </div>
 
-        <input type="text" name="name" placeholder="Street address" />
-        <input type="text" name="name" placeholder="Street address line 2" />
-        <div className="city-item">
-          <input type="text" name="name" placeholder="City" />
-          <select>
-            <option value>Country</option>
-            <option value={1}>Russia</option>
-            <option value={2}>Germany</option>
-            <option value={3}>France</option>
-            <option value={4}>Armenia</option>
-            <option value={5}>USA</option>
-          </select>
+            <div>
+              <input
+                {...register("Vehicle Type", { required: true })}
+                type="radio"
+                value="SUV"
+                id="radio_2"
+                name="vehicle"
+              />
+              <label htmlFor="radio_2" className="radio">
+                <span>SUV</span>
+              </label>
+            </div>
+            <div>
+              <input
+                {...register("Vehicle Type", { required: true })}
+                type="radio"
+                value="Van"
+                id="radio_3"
+                name="vehicle"
+              />
+              <label htmlFor="radio_3" className="radio">
+                <span>Van</span>
+              </label>
+            </div>
+            <div>
+              <input
+                {...register("Vehicle Type", { required: true })}
+                type="radio"
+                value="Pickup"
+                id="radio_4"
+                name="vehicle"
+              />
+              <label htmlFor="radio_4" className="radio">
+                <span>Pickup</span>
+              </label>
+            </div>
+            <div>
+              <input
+                {...register("Vehicle Type", { required: true })}
+                type="radio"
+                value="other:"
+                id="radio_5"
+                name="vehicle"
+              />
+              <label htmlFor="radio_5" className="radio other">
+                <span>other:</span>
+              </label>
+            </div>
+          </div>
         </div>
 
-        <input
-          className="Req"
-          type="text"
-          placeholder="Destination"
-          {...register("Destination", { required: true })}
-        />
-        <input
-          className="Req"
-          type="text"
-          placeholder="NOTES"
-          {...register("NOTES", {})}
-        />
+        <div className="itemReq">
+          <p className="Req"> Pick Up Date</p>
+          <input
+            className="Req"
+            type="date"
+            name="bdate"
+            {...register("Pick Up Date", { required: true })}
+          />
+          <i className="fas fa-calendar-alt" />
+        </div>
 
-        <input
-          className="submit"
-          href="/homepage"
-          type="submit"
-          value="Submit Form"
-        />
+        <div className="itemReq">
+          <p className="Req">Pick Up Time &nbsp; &nbsp;hh:mm: AM/PM-</p>
+          <input
+            className="Req"
+            type="time"
+            name="name"
+            {...register("Pick Up Time", { required: true })}
+          />
+          <i className="fas fa-clock" />
+        </div>
+
+        <div className="itemReq">
+          <p className="Req"> Pick Up Point</p>
+          <input
+            className="Req"
+            type="text"
+            name="name"
+            placeholder="Street address"
+            {...register("street 1", { required: true })}
+          />
+          <input
+            className="Req"
+            type="text"
+            name="name"
+            placeholder="Street address line 2"
+            {...register("street 2", { required: true })}
+          />
+          <div className="city-item">
+            <input
+              className="Req"
+              type="text"
+              name="name"
+              placeholder="City"
+              {...register("City", { required: true })}
+            />
+
+            <select className="Req">
+              <option value>Country</option>
+              <option value={1}>Russia</option>
+              <option value={2}>Germany</option>
+              <option value={3}>France</option>
+              <option value={4}>Armenia</option>
+              <option value={5}>USA</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="itemReq">
+          <p className="Req">Destination</p>
+          <input
+            className="Req"
+            type="text"
+            name="name"
+            placeholder="Street address"
+            {...register("street 1 Destination", { required: true })}
+          />
+          <input
+            className="Req"
+            type="text"
+            name="name"
+            placeholder="Street address line 2"
+            {...register("street 2 Destination", { required: true })}
+          />
+          <div className="city-item">
+            <input
+              className="Req"
+              type="text"
+              name="name"
+              placeholder="City"
+              {...register("City Destination", { required: true })}
+            />
+
+            <select className="Req">
+              <option value>Country</option>
+              <option value={1}>Russia</option>
+              <option value={2}>Germany</option>
+              <option value={3}>France</option>
+              <option value={4}>Armenia</option>
+              <option value={5}>USA</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="itemReq">
+          <p className="Req"> Notes</p>
+
+          <textarea className="Req" rows={3} defaultValue={""} />
+        </div>
+
+        <div className="btn-block">
+          <a href="/homepage" className="submit">
+            SUBMIT
+          </a>
+        </div>
       </form>
     </div>
   );

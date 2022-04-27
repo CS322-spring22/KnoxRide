@@ -1,237 +1,159 @@
-html, body.request {
-    min-height: 100%;
-    }
-    
-    
-    .AppUserrequest > html {
-        font-size: 62.5%;
-        font-family: "Roboto", sans-serif;
-        text-align: center;
-        justify-content: center;
-      }
-p {
-  text-align: left;
-  padding-left: 10px;
+html, body {
+  min-height: 100%;
+  }
+  body, div, form.Req, input.Req, select.Req, textarea.Req, p.Req { 
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  color: #666;
+  line-height: 2rem;
+  }
+  textarea.Req{
+    width: 100%;
+  }
+  h1.Req {
+  position: absolute;
+  margin: 0;
+  font-size: 4rem;
+  color: #fff;
+  z-index: 2;
+  }
+  form.Req {
+  width: 95%;
+  padding: 2rem;
+  margin: auto;
+  margin-top: 3em;
+  align-items:center;
+  border-radius: .5rem;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 0 2rem 0 #333; 
+  }
+  .bannerReq {
+  position: relative;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  }
+  .bannerReq::after {
+  content: "";
+  background-color: #05336e; 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  }
+  input.Req, textarea.Req, select.Req {
+  margin-bottom: 2 rem;
+  border: .08rem solid rgb(17, 210, 224);
+  border-radius: 1rem;
+  }
+  input.Req {
+  width: calc(100% - .5rem);
+  padding: .25rem;
+  }
+  select.Req {
+  width: 100%;
+  padding: 1rem 0;
+  background: transparent;
+  }
+  /*.Req {
+  width: calc(100% - 12px);
+  padding: 5px;
+  } */
+  .itemReq:hover p, .itemReq:hover i, .questionReq:hover p, .questionReq label:hover, input.Req:hover::placeholder {
+  color: #333;
+  }
+  .itemReq input.Req:hover, .itemReq select.Req:hover, .itemReq textarea.Req:hover {
+  border: .5rem solid transparent;
+  box-shadow: 0 0 6px 0 #333;
+  color: #333;
+  }
+  .itemReq {
+  position: relative;
+  margin: .5rem 0;
+  }
+  input[type="date"].Req::-webkit-inner-spin-button {
+  display: none;
+  }
+  .itemReq i, input[type="date"].Req::-webkit-calendar-picker-indicator {
+  position: absolute;
+  font-size: 1rem;
+  color: #a9a9a9;
+  }
+
+  [type="date"]::-webkit-calendar-picker-indicator {
+  right: 0;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+  }
+  input.Req[type='radio'], input.other {
+  display: none;
+  margin-left: 1rem;
+  }
+  label.radio {
+  position: relative;
+  display: inline-block;
+  margin: 5px 20px 1px 0;
+  cursor: pointer;
+  }
+  .question-answer span {
   
-}
-    h1.Req {
-    position: absolute;
-    margin: 0;
-    font-size: 4rem;
-    color: #fff;
-    z-index: 2;
-    }     
-    form.Req {
-    text-align: center;
-    justify-content: center;
-     align-items: center;
-    width: 93%;
-    padding: 2rem;
-    margin: auto;
-    margin-top: 3em;
-    border-radius: .5rem;
-    background: rgb(255, 255, 255);
-    box-shadow: 0 0 20px 0 rgb(63, 45, 137); 
-    }
-   
-    .bannerReq { 
-    position: relative;
-    height: 10rem;
-    width: 1 rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    }
-    .bannerReq::after {
-    content: "";
-    background-color: rgba(100, 40, 102, 0.955); 
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    }
-    
-    input.Req, textarea, select { /* border of each*/
-    margin-bottom: 10px;
-    border: 1px solid rgb(252, 66, 66);
-    border-radius: 3px;
-    }
-    input {
-      text-align: left;
-    width: calc(100% - 10px);
-    padding: 5px;
-    }
-    select {
-    width: 100%;
-    padding: 7px 0;
-    background: transparent;
-    }
-    textarea {
-    width: calc(100% - 12px);
-    padding: 5px;
-    }
-    .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
-    color: #333;
-    }
-    .item input:hover, .item select:hover, .item textarea:hover {
-    border: 1px solid transparent;
-    box-shadow: 0 0 6px 0 #333;
-    color: #333;
-    }
-    .item {
-    position: relative;
-    margin: 10px 0;
-    }
-    input[type="date"]::-webkit-inner-spin-button {
-    display: none;
-    }
-    .item i, input[type="date"]::-webkit-calendar-picker-indicator {
-    position: absolute;
-    font-size: 20px;
-    color: #a9a9a9;
-    }
-    .item i {
-    right: 1%;
-    top: 30px;
-    z-index: 1;
-    }
-    [type="date"]::-webkit-calendar-picker-indicator {
-    right: 0;
-    z-index: 2;
-    opacity: 0;
-    cursor: pointer;
-    }
-    input[type="time"]::-webkit-inner-spin-button {
-    margin: 2px 22px 0 0;
-    }
-    input[type=radio], input.other {
-    display: none;
-    }
-    label.radio {
-    position: relative;
-    display: inline-block;
-    margin: 5px 20px 10px 0;
-    cursor: pointer;
-    }
-    .question span {
-    margin-left: 30px;
-    }
-    label.radio:before {
-    content: "";
-    position: absolute;
-    top: 2px;
-    left: 0;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 2px solid #ccc;
-    }
-    #radio_5:checked ~ input.other {
-    display: block;
-    }
-    input[type=radio]:checked + label.radio:before {
-    border: 2px solid #444;
-    background: rgb(198, 193, 205);
-    }
-    label.radio:after {
-    content: "";
-    position: absolute;
-    top: 7px;
-    left: 5px;
-    width: 7px;
-    height: 4px;
+  font-weight: bold;
+  }
+  label.radio:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  }
+  #radio_5:checked ~ input.other {
+  display: block;
+  }
+  input[type=radio].Req:checked + label.radio:before {
+  border: 2px solid #444;
+  background: #444;
+  }
+  label.radio:after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  width: 7px;
+  height: 4px;
+  border: 3px solid #fff;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+  opacity: 0;
+  }
+  input[type=radio].Req:checked + label:after {
+  opacity: 1;
+  }
+  .btn-block {
+  margin-top: 10px;
+  text-align: center;
+  padding: 30;
+  background-color: #05336e;
+  }
 
-    border: 3px solid #fff;
-    border-top: none;
-    border-right: none;
-    transform: rotate(-45deg);
-    opacity: 0;
-    }
-    input[type=radio]:checked + label:after {
-    opacity: 1;
-    }
-    .submit {
-     width: 150px;
-    padding: 10px;
-    border: none;
-    text-align: center;
-    border-radius: 5px; 
-    background: #444;
-    font-size: 16px;
-    color: #fff;
-    cursor: pointer;  
-    }
-    button:hover {
-    background: #666;
-    }
-
-    .headerUser {
-        border-bottom: 10px solid #05336e;
-       /*  background-color: #1d65ac; */
-      }
-      img.userContactLogo {
-        width: auto;
-        max-height: 100%;
-      }
-      
-      .navbarUserContact {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex;
-        padding: 1rem 1rem;
-        max-height: 100%;
-        max-width: 100%;
-        background-color:#ffb6e1;
-      }
-      img.userContactLogo {
-        max-width: 120%;
-        max-height: 120%;
-      }
-      .logopic {
-        height: 50px;
-        width: 50px;
-      }
-      
-      
-      
-      .nav-menu-contact {
-        display: flex;
-       /* justify-content: space-between;*/
-        align-items: center;
-        
-      }
-      
-      .nav-item-contact {
-        list-style: none;
-        margin-left: 1rem;
-        text-align: center;
-      
-        
-      }
-      
-      .nav-link-contact {
-        text-decoration: none;
-        font-size: 1.3rem;
-        font-weight: 300;
-        color: #190060;
-        text-align: center;
-      }
-      .nav-item-contact:hover{
-        background-color: #84f5ff;
-        color:#d20606;
-      }
-
-    @media (min-width: 568px) {
-    .name-item, .city-item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    }
-    .name-item input, .city-item input {
-    width: calc(50% - 20px);
-    }
-    .city-item select {
-    width: calc(50% - 8px);
-    }
-    }
-    
+  @media (min-width: 568px) {
+  .name-item, .city-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  }
+  .name-item input, .city-item input {
+  width: calc(50% - 20px);
+  }
+  .city-item select {
+  width: calc(50% - 8px);
+  }
+  }
