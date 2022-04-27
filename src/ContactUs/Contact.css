@@ -1,37 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-
-.AppUserContact > html {
+.AppUser > html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
 }
- input.contact { 
-  padding: 0;
-  margin: 0;
-  outline: none;
-  font-family: Roboto, Arial, sans-serif;
-  font-size: 1rem;
-  color: #666;
-  line-height: 2rem;
-  }
-  input.contact {
-    margin-bottom: 2 rem;
-    border: .08rem solid rgb(17, 210, 224);
-    border-radius: 1rem;
-    }
-    input.contact {
-      width: calc(100% - .5rem);
-      padding: .25rem;
-      }
-      input.contact:hover::placeholder {
-        color: #333;
-        }
-       input.contact:hover {
-        border: .5rem solid transparent;
-        box-shadow: 0 0 6px 0 #333;
-        color: #333;
-        }
 /*
 li {
   list-style: none;
@@ -45,12 +23,12 @@ a {
   border-bottom: 10px solid #05336e;
  /* background-color: #1d65ac; */
 }
-img.userContactLogo {
+img {
   width: auto;
   max-height: 100%;
 }
 
-.navbarUserContact {
+.navbarUser {
   display: flex;
   justify-content: space-between;
   align-items: flex;
@@ -59,7 +37,7 @@ img.userContactLogo {
   max-width: 100%;
   background-color:#ffb6e1;
 }
-img.userContactLogo {
+img {
   max-width: 120%;
   max-height: 120%;
 }
@@ -68,16 +46,24 @@ img.userContactLogo {
   width: 50px;
 }
 
+.bar {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #6e88d8;
+}
 
-
-.nav-menu-contact {
+.nav-menu {
   display: flex;
   /*justify-content: space-between;*/
   align-items: center;
   
 }
 
-.nav-item-contact {
+.nav-item {
   list-style: none;
   margin-left: 1rem;
   text-align: center;
@@ -85,14 +71,14 @@ img.userContactLogo {
   
 }
 
-.nav-link-contact {
+.nav-link {
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 300;
   color: #190060;
   text-align: center;
 }
-.nav-item-contact:hover{
+.nav-item:hover{
   background-color: #84f5ff;
   color:#d20606;
 }
@@ -102,3 +88,8 @@ img.userContactLogo {
   background-color: #eca310; 
 }
 */
+.nav-logo {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: #e0364a;
+}
