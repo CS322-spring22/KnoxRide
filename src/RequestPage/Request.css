@@ -2,15 +2,6 @@ html, body.request {
     min-height: 100%;
     }
     
-    body.request, div, form.Req, input.request, select, textarea, p { 
-    padding: 0;
-    margin: 0;
-    outline: none;
-    font-family: Roboto, Arial, sans-serif;
-    font-size: 1rem;
-    color: rgb(194, 24, 95);
-    line-height: 1.6rem;
-    }
     
     .AppUserrequest > html {
         font-size: 62.5%;
@@ -18,8 +9,11 @@ html, body.request {
         text-align: center;
         justify-content: center;
       }
-
-
+p {
+  text-align: left;
+  padding-left: 10px;
+  
+}
     h1.Req {
     position: absolute;
     margin: 0;
@@ -57,12 +51,13 @@ html, body.request {
     height: 100%;
     }
     
-    input, textarea, select { /* border of each*/
+    input.Req, textarea, select { /* border of each*/
     margin-bottom: 10px;
     border: 1px solid rgb(252, 66, 66);
     border-radius: 3px;
     }
     input {
+      text-align: left;
     width: calc(100% - 10px);
     padding: 5px;
     }

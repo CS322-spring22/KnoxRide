@@ -58,148 +58,57 @@ function Request() {
         <h1 className="Req">Car Booking Form</h1>
       </div>
       <form className="Req" onSubmit={handleSubmit(onSubmit)}>
-        <div className="name-item">
-          <input
-            className="Req"
-            type="text"
-            placeholder="First name"
-            {...register("First name", { required: true, maxLength: 20 })}
-          />
-          <input
-            className="Req"
-            type="text"
-            placeholder="Last name"
-            {...register("Last name", { required: true, maxLength: 20 })}
-          />
-        </div>
-
-        <input
-          className="Req"
-          type="text"
-          placeholder="Email"
-          {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
-        />
-        <input
-          className="Req"
-          type="tel"
-          placeholder="Phone Number"
-          {...register("Phone Number", { required: true, maxLength: 10 })}
-        />
-        <input
-          className="Req"
-          type="number"
-          placeholder="Number of Passengers"
-          {...register("Number of Passengers", {
-            required: true,
-            max: 99,
-            min: 0,
-            maxLength: 2,
-          })}
-        />
-
-        <input
-          className="Req"
-          {...register("Vehicle Type", { required: true })}
-          type="radio"
-          value="Compact"
-        />
-        <input
-          className="Req"
-          {...register("Vehicle Type", { required: true })}
-          type="radio"
-          value="SUV"
-        />
-        <input
-          className="Req"
-          {...register("Vehicle Type", { required: true })}
-          type="radio"
-          value="Van"
-        />
-        <input
-          className="Req"
-          {...register("Vehicle Type", { required: true })}
-          type="radio"
-          value="Pickup"
-        />
-        <input
-          className="Req"
-          {...register("Vehicle Type", { required: true })}
-          type="radio"
-          value="other:"
-        />
-        <input
-          className="Req"
-          type="datetime-local"
-          placeholder="Pick Up Date + Time"
-          {...register("Pick Up Date + Time", { required: true })}
-        />
-
-        <input type="text" name="name" placeholder="Street address" />
-        <input type="text" name="name" placeholder="Street address line 2" />
-        <div className="city-item">
-          <input type="text" name="name" placeholder="City" />
-          <select>
-            <option value>Country</option>
-            <option value={1}>Russia</option>
-            <option value={2}>Germany</option>
-            <option value={3}>France</option>
-            <option value={4}>Armenia</option>
-            <option value={5}>USA</option>
-          </select>
-        </div>
-
-        <input
-          className="Req"
-          type="text"
-          placeholder="Destination"
-          {...register("Destination", { required: true })}
-        />
-        <input
-          className="Req"
-          type="text"
-          placeholder="NOTES"
-          {...register("NOTES", {})}
-        />
-
-        <input
-          className="submit"
-          href="/homepage"
-          type="submit"
-          value="Submit Form"
-        />
-      </form>
-    </div>
-  );
-}
-
-/*import "./Request.css";
-import logo from "../UserHomePage/logopic.png";
-
-function Request() {
-  return (
-    <div className="testbox">
-      <formR className="Req" /*action="http://localhost:3000/request" >
-        <div className="bannerReq">
-          <h1 className="Req">Car Booking Form</h1>
-        </div>
         <div className="item">
           <p>Name</p>
           <div className="name-item">
-            <input type="text" name="name" placeholder="First" />
-            <input type="text" name="name" placeholder="Last" />
+            <input
+              className="Req"
+              type="text"
+              placeholder="First name"
+              {...register("First name", { required: true, maxLength: 20 })}
+            />
+            <input
+              className="Req"
+              type="text"
+              placeholder="Last name"
+              {...register("Last name", { required: true, maxLength: 20 })}
+            />
           </div>
         </div>
         <div className="item">
           <p>Email</p>
-          <input type="text" name="name" />
+          <input
+            className="Req"
+            type="text"
+            placeholder="Email"
+            {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
+          />
         </div>
+
         <div className="item">
-          <p>Phone</p>
-          <input type="text" name="name" />
+          <p>Phone Number</p>
+          <input
+            className="Req"
+            type="tel"
+            placeholder="Phone Number"
+            {...register("Phone Number", { required: true, maxLength: 10 })}
+          />
         </div>
+
         <div className="item">
           <p>Number of Passengers</p>
-          <input type="text" name="name" />
+
+          <input
+            className="Req"
+            type="number"
+            placeholder="Number of Passengers"
+            {...register("Number of Passengers", {
+              required: true,
+              max: 99,
+              min: 0,
+              maxLength: 2,
+            })}
+          />
         </div>
         <div className="question">
           <p>Vehicle</p>
@@ -262,6 +171,179 @@ function Request() {
             </div>
           </div>
         </div>
+        {/*<div className="question">
+          <p>Vehicle</p>
+          <div className="question-answer"></div>
+          <div>
+            <input
+              {...register("Vehicle Type", { required: true })}
+              type="radio"
+              value="Compact"
+            />
+          </div>
+          <div>
+            <input
+              {...register("Vehicle Type", { required: true })}
+              type="radio"
+              value="SUV"
+            />
+          </div>
+          <input
+            {...register("Vehicle Type", { required: true })}
+            type="radio"
+            value="Van"
+          />
+          <input
+            {...register("Vehicle Type", { required: true })}
+            type="radio"
+            value="Pickup"
+          />
+          <input
+            {...register("Vehicle Type", { required: true })}
+            type="radio"
+            value="other:"
+          />
+        </div>
+          */}
+
+        <input
+          type="datetime-local"
+          placeholder="Pick Up Date + Time"
+          {...register("Pick Up Date + Time", { required: true })}
+        />
+
+        <input type="text" name="name" placeholder="Street address" />
+        <input type="text" name="name" placeholder="Street address line 2" />
+        <div className="city-item">
+          <input type="text" name="name" placeholder="City" />
+          <select>
+            <option value>Country</option>
+            <option value={1}>Russia</option>
+            <option value={2}>Germany</option>
+            <option value={3}>France</option>
+            <option value={4}>Armenia</option>
+            <option value={5}>USA</option>
+          </select>
+        </div>
+
+        <input
+          className="Req"
+          type="text"
+          placeholder="Destination"
+          {...register("Destination", { required: true })}
+        />
+        <input
+          className="Req"
+          type="text"
+          placeholder="NOTES"
+          {...register("NOTES", {})}
+        />
+
+        <input
+          className="submit"
+          href="/homepage"
+          type="submit"
+          value="Submit Form"
+        />
+      </form>
+    </div>
+  );
+}
+
+/*import "./Request.css";
+import logo from "../UserHomePage/logopic.png";
+
+function Request() {
+  return (
+    <div className="testbox">
+      <form className="Req" onSubmit={handleSubmit(onSubmit)}>
+        <div className="bannerReq">
+          <h1 className="Req">Car Booking Form</h1>
+        </div>
+        <div className="item">
+          <p>Name</p>
+          <div className="name-item">
+            <input type="text" name="name" placeholder="First" />
+            <input type="text" name="name" placeholder="Last" />
+          </div>
+        </div>
+        <div className="item">
+          <p>Email</p>
+          <input type="text" name="name" />
+        </div>
+        <div className="item">
+          <p>Phone</p>
+          <input type="text" name="name" />
+        </div>
+        <div className="item">
+          <p>Number of Passengers</p>
+          <input type="text" name="name" />
+        </div>
+
+
+        <div className="question">
+          <p>Vehicle</p>
+          <div className="question-answer">
+            <div>
+              <input
+                type="radio"
+                defaultValue="none"
+                id="radio_1"
+                name="vehicle"
+              />
+              <label htmlFor="radio_1" className="radio">
+                <span>Compact</span>
+              </label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                defaultValue="none"
+                id="radio_2"
+                name="vehicle"
+              />
+              <label htmlFor="radio_2" className="radio">
+                <span>SUV</span>
+              </label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                defaultValue="none"
+                id="radio_3"
+                name="vehicle"
+              />
+              <label htmlFor="radio_3" className="radio">
+                <span>Van</span>
+              </label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                defaultValue="none"
+                id="radio_4"
+                name="vehicle"
+              />
+              <label htmlFor="radio_4" className="radio">
+                <span>Pickup</span>
+              </label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                defaultValue="none"
+                id="radio_5"
+                name="vehicle"
+              />
+              <label htmlFor="radio_5" className="radio other">
+                <span>other:</span>
+              </label>
+              <input className="other" type="text" name="name" />
+            </div>
+          </div>
+        </div>
+
+
         <div className="item">
           <p>Pick Up Date</p>
           <input type="date" name="bdate" />
