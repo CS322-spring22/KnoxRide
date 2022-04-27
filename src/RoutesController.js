@@ -1,8 +1,14 @@
 import React from 'react'
 import {Route, Routes} from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Feed from './Feed';
 import HomePage from './UserHomePage/userHomePage';
+=======
+import HomePage from './UserHomePage/userHomePage';
+import DriverFeed from './DriverNewsFeed/DriverFeed';
+import DriverSchedulePage from './DriverSchedule/DriverSchedulePage';
+>>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
 =======
 import HomePage from './UserHomePage/userHomePage';
 import DriverFeed from './DriverNewsFeed/DriverFeed';

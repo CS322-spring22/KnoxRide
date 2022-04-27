@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import "./Contact.css";
 import logo from "../UserHomePage/logopic.png";
 import "../RequestPage/Request.css";
@@ -91,6 +92,8 @@ function contactUs() {
 }
 
 =======
+=======
+>>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
 import './Contact.css';
 import logo from '../UserHomePage/logopic.png';
 
@@ -163,5 +166,8 @@ function contactUs() {
 }
 
 
+<<<<<<< HEAD
+>>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
+=======
 >>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
 export default contactUs;

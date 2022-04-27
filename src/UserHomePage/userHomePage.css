@@ -24,7 +24,11 @@ a {
  /* background-color: #1d65ac; */
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 img.userHome  {
+=======
+img {
+>>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
 =======
 img {
 >>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
@@ -42,26 +46,35 @@ img {
   background-color:#ffb6e1;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 img.userHome {
   max-width: 120%;
   max-height: 120%;
 }
 .logopicuserhome {
 =======
+=======
+>>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
 img {
   max-width: 120%;
   max-height: 120%;
 }
 .logopic {
+<<<<<<< HEAD
+>>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
+=======
 >>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
   height: 50px;
   width: 50px;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 .nav-menu-home {
 =======
+=======
+>>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
 .bar {
   display: block;
   width: 20px;
@@ -73,6 +86,9 @@ img {
 }
 
 .nav-menu {
+<<<<<<< HEAD
+>>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
+=======
 >>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
   display: flex;
   /*justify-content: space-between;*/
@@ -81,7 +97,11 @@ img {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .nav-item-home {
+=======
+.nav-item {
+>>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
 =======
 .nav-item {
 >>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
@@ -93,7 +113,11 @@ img {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .nav-link-home {
+=======
+.nav-link {
+>>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
 =======
 .nav-link {
 >>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
@@ -104,7 +128,11 @@ img {
   text-align: center;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .nav-item-home:hover{
+=======
+.nav-item:hover{
+>>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
 =======
 .nav-item:hover{
 >>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
@@ -118,12 +146,18 @@ img {
 }
 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
 .nav-logo {
   font-size: 2.1rem;
   font-weight: 500;
   color: #e0364a;
 }
+<<<<<<< HEAD
+>>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
+=======
 >>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
 .columnHome {
   float: left;
@@ -135,7 +169,11 @@ img {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 h1.homeColumn {
+=======
+h1 {
+>>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
 =======
 h1 {
 >>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
@@ -145,7 +183,11 @@ h1 {
   font-size: 1rem;
   background-color: solid #d20606;
 <<<<<<< HEAD
+<<<<<<< HEAD
   color: rgb(0, 0, 0);
+=======
+  color: rgb(255, 18, 164);
+>>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
 =======
   color: rgb(255, 18, 164);
 >>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db

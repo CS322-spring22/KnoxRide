@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { useForm } from "react-hook-form";
 import logo from "../UserHomePage/logopic.png";
@@ -512,6 +513,8 @@ function Request() {
         </div>
           */
 =======
+=======
+>>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
 import './Request.css';
 function Request(){
     return(
@@ -623,4 +626,7 @@ function Request(){
 
 }
 export default Request;
+<<<<<<< HEAD
+>>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
+=======
 >>>>>>> fe3fa22b3b9c85e656e7b280429b3e8be108e2db
