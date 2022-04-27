@@ -8,8 +8,11 @@ import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Avatar, IconButton } from '@material-ui/core';
 import { Link } from "react-router-dom";
+// import { useStateValue } from './StateProvider';
 
 function DriverHeader() {
+    // const [{ user }, dispatch] = useStateValue();
+
     return (
         <div className="driver_header">
             <div className="driver_header_left">
