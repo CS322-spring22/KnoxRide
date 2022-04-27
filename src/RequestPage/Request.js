@@ -54,10 +54,7 @@ function Request() {
         //HEADER ENDS HERE , BEGIN PAGE BELOW
       }
 
-      <div className="bannerReq">
-        <h1 className="Req">Car Booking Form</h1>
-      </div>
-      <form className="Req" onSubmit={handleSubmit(onSubmit)}>
+      <form className="Req">
         <div className="itemReq">
           <p className="Req">Name</p>
           <div className="name-item">
@@ -77,6 +74,7 @@ function Request() {
             />
           </div>
         </div>
+
         <div className="itemReq">
           <p className="Req">Email</p>
           <input
@@ -114,71 +112,9 @@ function Request() {
             })}
           />
         </div>
-
-        {/*
-        <div className="question">
-          <p>Vehicle</p>
-          <div className="question-answer">
-            <div>
-              <input
-                type="radio"
-                defaultValue="none"
-                id="radio_1"
-                name="vehicle"
-              />
-              <label htmlFor="radio_1" className="radio">
-                <span>Compact</span>
-              </label>
-            </div>
-            <div>
-              <input
-                type="radio"
-                defaultValue="none"
-                id="radio_2"
-                name="vehicle"
-              />
-              <label htmlFor="radio_2" className="radio">
-                <span>SUV</span>
-              </label>
-            </div>
-            <div>
-              <input
-                type="radio"
-                defaultValue="none"
-                id="radio_3"
-                name="vehicle"
-              />
-              <label htmlFor="radio_3" className="radio">
-                <span>Van</span>
-              </label>
-            </div>
-            <div>
-              <input
-                type="radio"
-                defaultValue="none"
-                id="radio_4"
-                name="vehicle"
-              />
-              <label htmlFor="radio_4" className="radio">
-                <span>Pickup</span>
-              </label>
-            </div>
-            <div>
-              <input
-                type="radio"
-                defaultValue="none"
-                id="radio_5"
-                name="vehicle"
-              />
-              <label htmlFor="radio_5" className="radio other">
-                <span>other:</span>
-              </label>
-              <input className="other" type="text" name="name" />
-            </div>
-          </div>
-        </div>
-          */}
-
+        {
+          //    Other radio stuff here, for now is on bottom of page
+        }
         <div className="questionReq">
           <p className="Req">Vehicle</p>
           <div className="question-answerReq">
@@ -356,6 +292,8 @@ function Request() {
   );
 }
 
+export default Request;
+
 /*import "./Request.css";
 import logo from "../UserHomePage/logopic.png";
 
@@ -508,4 +446,67 @@ function Request() {
   );
 }*/
 
-export default Request;
+//    THE RADIO STUFF IS HERE
+/*
+        <div className="question">
+          <p>Vehicle</p>
+          <div className="question-answer">
+            <div>
+              <input
+                type="radio"
+                defaultValue="none"
+                id="radio_1"
+                name="vehicle"
+              />
+              <label htmlFor="radio_1" className="radio">
+                <span>Compact</span>
+              </label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                defaultValue="none"
+                id="radio_2"
+                name="vehicle"
+              />
+              <label htmlFor="radio_2" className="radio">
+                <span>SUV</span>
+              </label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                defaultValue="none"
+                id="radio_3"
+                name="vehicle"
+              />
+              <label htmlFor="radio_3" className="radio">
+                <span>Van</span>
+              </label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                defaultValue="none"
+                id="radio_4"
+                name="vehicle"
+              />
+              <label htmlFor="radio_4" className="radio">
+                <span>Pickup</span>
+              </label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                defaultValue="none"
+                id="radio_5"
+                name="vehicle"
+              />
+              <label htmlFor="radio_5" className="radio other">
+                <span>other:</span>
+              </label>
+              <input className="other" type="text" name="name" />
+            </div>
+          </div>
+        </div>
+          */
