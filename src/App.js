@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import DriverHeader from './DriverHeader';
+import DriverHeader from './DriverNewsFeed/DriverHeader';
 import RoutesController from './RoutesController';
 import { useLocation } from 'react-router-dom';
 
 function App() {
-  const noDriverHeaderArray = ['/login', '/homepage', '/request'];
+  const noDriverHeaderArray = ['/login', '/homepage', '/request', '/contact'];
   const { pathname } = useLocation();
 
   return (

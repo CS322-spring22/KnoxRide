@@ -120,7 +120,7 @@ form .form-inner input[type="submit"]:hover,
 }
 
 .welcome h2 {
-  color: #888;
+  color: rgb(192, 36, 36);
   font-size: 28px;
   font-weight: 500;
   margin-bottom: 30px;
