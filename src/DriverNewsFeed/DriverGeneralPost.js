@@ -34,11 +34,6 @@ function DriverGeneralPost({ profilePic, image, username, timestamp, message }) 
                 </div>
 
                 <div className="driver_genPost_option">
-                    <ClearIcon />
-                    <p>Decline</p>
-                </div>
-
-                <div className="driver_genPost_option">
                     <ChatBubbleIcon />
                     <p>Negotiate</p>
                 </div>
