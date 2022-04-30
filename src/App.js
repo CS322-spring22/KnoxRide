@@ -5,7 +5,7 @@ import RoutesController from './RoutesController';
 import { useLocation } from 'react-router-dom';
 
 function App() {
-  const noDriverHeaderArray = ['/login', '/homepage'];
+  const noDriverHeaderArray = ['/login', '/homepage', '/request', '/contact'];
   const { pathname } = useLocation();
   // const user = "rosie";
   return (
@@ -19,3 +19,4 @@ function App() {
 }
 
 export default App;
+
