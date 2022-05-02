@@ -2,7 +2,6 @@ import React from 'react';
 import './DriverGeneralPost.css';
 import { Avatar } from '@material-ui/core';
 import DoneIcon from '@mui/icons-material/Done';
-import ClearIcon from '@mui/icons-material/Clear';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 

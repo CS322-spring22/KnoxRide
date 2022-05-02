@@ -1,9 +1,16 @@
 import React from 'react';
 import "./DriverFeed.css";
 import DriverGeneralPost from "./DriverGeneralPost";
-
+import { db } from "./firebaseconfig/fire2";
 
 function DriverFeed() {
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        db.collection('posts').onSnapshot(snapshot => (
+            setPosts(snapshot.docs.map(doc => ({ id: doc.id, data: doc.data() })))
+        ))
+    }, [])
     return (
         <div className="driver_feed">
             <div className="driver_feed_body">

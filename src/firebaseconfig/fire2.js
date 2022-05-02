@@ -1,5 +1,6 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
+import firebase from "firebase";
 //import 'firebase/compat/firestore';
 
 
@@ -15,9 +16,9 @@ var firebaseConfig = {
 };
 
 const fire2 = firebase.initializeApp(firebaseConfig);
-//const db = fire2.firestore();
+const db = fire2.firestore();
 const auth = firebase.auth();
+const provider = new firebase.auth.EmailAuthProvider.credential(email, password);
 
-
-
+export { auth, provider, db };
 export default fire2;

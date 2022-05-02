@@ -1,10 +1,10 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom';
-import HomePage from './UserHomePage/userHomePage';
+// import HomePage from './UserHomePage/userHomePage';
 import DriverFeed from './DriverNewsFeed/DriverFeed';
 import DriverSchedulePage from './DriverSchedule/DriverSchedulePage';
-import Applog from './Applog';
-import Request from './RequestPage/Request.js';
+// import Applog from './Applog';
+// import Request from './RequestPage/Request.js';
 import Contact from './ContactUs/Contact.js';
 
 function RoutesController() {
@@ -13,9 +13,9 @@ function RoutesController() {
         <Routes>
             <Route exact path="/" element={<DriverFeed />} />
             <Route exact path="/driverschedule" element={<DriverSchedulePage />} />
-            <Route exact path="/login" element={<Applog />} />
+            {/* <Route exact path="/login" element={<Applog />} />
             <Route exact path="/homepage" element={<HomePage />} />
-            <Route exact path="/request" element={<Request />} />
+            <Route exact path="/request" element={<Request />} /> */}
             <Route exact path="/contact" element={<Contact />} />
         </Routes>
     )

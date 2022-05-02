@@ -8,10 +8,10 @@ import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Avatar, IconButton } from '@material-ui/core';
 import { Link } from "react-router-dom";
-// import { useStateValue } from './StateProvider';
+import { useStateValue } from '../StateProvider';
 
 function DriverHeader() {
-    // const [{ user }, dispatch] = useStateValue();
+    const [{ user }, dispatch] = useStateValue();
 
     return (
         <div className="driver_header">
@@ -23,10 +23,10 @@ function DriverHeader() {
                 <div className="driver_header_avatar">
                     <Link to = "/driverprofile">
                         <IconButton>
-                            <Avatar fontSize="large"/>
+                            <Avatar src={user.photoURL} fontSize="large"/>
                         </IconButton>
                     </Link>
-                    <h3>CS 322</h3>
+                    <h3>{user.displayName}</h3>
                 </div>
             </div>
 
