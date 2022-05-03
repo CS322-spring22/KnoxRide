@@ -26,7 +26,7 @@ function DriverFeed() {
                 console.log(userRequest.name);
                 return (
                     <DriverGeneralPost
-                        name={"testing"}
+                        name={userRequest.name}
                         email={userRequest.email}
                         phoneNumber={userRequest.phoneNumber}
                         numberOfPassengers={userRequest.numberOfPassengers}
