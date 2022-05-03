@@ -1,7 +1,5 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
-// import firebase from './fire2';
-// import firebase from "firebase";
 import 'firebase/compat/firestore'; 
 
 
@@ -18,5 +16,4 @@ var firebaseConfig = {
 const fire2 = firebase.initializeApp(firebaseConfig);
 export const db = fire2.firestore();
 // const auth = firebase.auth();
-// const provider = new firebase.auth.EmailAuthProvider.credential();
 export default fire2;
