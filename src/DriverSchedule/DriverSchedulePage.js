@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
 import "react-big-calendar/lib/css/react-big-calendar.css";
-// import {format} from 'date-fns';
 import format from 'date-fns/format';
 import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
@@ -10,9 +9,6 @@ import './DriverSchedulePage.css';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import TimePicker from 'react-time-picker';
-// import "react-time-picker/dist/TimePicker.css";
-// import "react-clock/dist/Clock.css";
-// import TimePicker from 'react-time-picker/dist/entry.nostyle';
 
 const locales = {
     "en-US": require("date-fns/locale/en-US")
@@ -27,24 +23,6 @@ const localizer = dateFnsLocalizer({
 })
 
 const events = [
-    // {
-    //     title: "Big Meeting", 
-    //     allDay: true, 
-    //     start: new Date(2022,4,23),
-    //     end: new Date(2022,6,2),
-    // },
-
-    // {
-    //     title: "Vacation", 
-    //     start: new Date(2022, 6, 0),
-    //     end: new Date(2022, 7, 0),
-    // },
-
-    // {
-    //     title: "Conference", 
-    //     start: new Date(2022, 8, 0),
-    //     end: new Date(2022, 9, 0),
-    // },
 ];
 
 function DriverSchedulePage() {
