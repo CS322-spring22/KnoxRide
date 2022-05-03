@@ -63,3 +63,7 @@
   background-color: #eff2f5;
   border-radius: 10px;
 }
+
+.driver_genPost_bottom > label {
+  color: black;
+}

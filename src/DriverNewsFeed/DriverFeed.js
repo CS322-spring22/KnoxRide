@@ -1,25 +1,57 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "./DriverFeed.css";
 import DriverGeneralPost from "./DriverGeneralPost";
-import { db } from "./firebaseconfig/fire2";
+import { db } from "../firebaseconfig/fire2";
 
 function DriverFeed() {
-    const [posts, setPosts] = useState([]);
+    const [userRequest, setUserRequest] = useState([]);
 
     useEffect(() => {
-        db.collection('posts').onSnapshot(snapshot => (
-            setPosts(snapshot.docs.map(doc => ({ id: doc.id, data: doc.data() })))
-        ))
-    }, [])
+        
+        db.collection('userRequest').get()
+            .then((res) => {
+                const temp = [];
+                res.forEach((snapshot) => temp.push(snapshot.data()));
+                console.log(temp);
+                setUserRequest([...temp])   
+            })
+        
+         
+    }, []);
+
     return (
         <div className="driver_feed">
             <div className="driver_feed_body">
-                <DriverGeneralPost 
-                    profilePic = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYxJgOaEW2kENd4kgRyKELV8Z34RkQVEeECjMV49t71dBdJY51hcu6CZ7-smMrM1sY-I8&usqp=CAU"
-                    message = ' "/login" to visit Login page, "/homepage" to visit Home page'
-                    timestamp = "Monday"
-                    username = 'Money Lisa'
-                    image = "https://ih1.redbubble.net/image.1099621303.4631/poster,504x498,f8f8f8-pad,600x600,f8f8f8.jpg"
+                {userRequest.map((userRequest) => {
+                console.log(userRequest.name);
+                return (
+                    <DriverGeneralPost
+                        name={"testing"}
+                        email={userRequest.email}
+                        phoneNumber={userRequest.phoneNumber}
+                        numberOfPassengers={userRequest.numberOfPassengers}
+                        vehicles={userRequest.vehicles}
+                        pickupTime={userRequest.pickupTime}
+                        pickupLocation={userRequest.pickupLocation}
+                        destination={userRequest.destination}
+                        paymentRange={userRequest.paymentRange}
+                        notes={userRequest.notes}
+                    />
+                )})}
+
+
+
+                {/* <DriverGeneralPost 
+                    name="haha"
+                    email="css322@knox.edu"
+                    phoneNumber="01234"
+                    numberOfPassengers= "4"
+                    vehicles="car"
+                    pickupTime="05/22/2022"
+                    pickupLocation="knox college"
+                    destination="knox college"
+                    paymentRange="$20-25"
+                    notes="this is a note to driver"
                 />
                 <DriverGeneralPost 
                     profilePic = "https://img-9gag-fun.9cache.com/photo/aV7nzjn_460s.jpg"
@@ -34,9 +66,9 @@ function DriverFeed() {
                     timestamp = "Saturday"
                     username = 'Knox Ride admin'
                     image = "https://pics.me.me/cool-pepe-op-2713474.png"
-                />
+                /> */}
             </div>
         </div>
-    )
+    );
 }
 export default DriverFeed
