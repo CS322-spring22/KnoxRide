@@ -6,7 +6,7 @@ import Hero from './Hero';
 
 //import RegisForm from './Logincomponents/RegisForm';
 //import { Route, Routes } from 'react-router-dom';
-import UserHomePage from './UserHomePage/userHomePage';
+// import UserHomePage from './UserHomePage/userHomePage';
 //import { Link } from 'react-router-dom'
 
 

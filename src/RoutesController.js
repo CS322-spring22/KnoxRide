@@ -6,6 +6,7 @@ import DriverSchedulePage from "./DriverSchedule/DriverSchedulePage";
 import Applog from "./Applog";
 import Request from "./RequestPage/Request.js";
 import Contact from "./ContactUs/Contact.js";
+import UserRequest from './UserRequestPage/UserRequest';
 
 function RoutesController() {
   return (
@@ -15,9 +16,11 @@ function RoutesController() {
       <Route exact path="/login" element={<Applog />} />
       <Route exact path="/homepage" element={<HomePage />} />
       <Route exact path="/request" element={<Request />} />
+      <Route exact path="/userrequest" element={<UserRequest />} />
       <Route exact path="/contact" element={<Contact />} />
     </Routes>
   );
 }
 
 export default RoutesController;
+
