@@ -5,34 +5,34 @@ function HomePage() {
     <div className="AppUser">
       <header className="headerUser">
         <nav className="navbarUser">
-          <nav className="logopic">
+          <nav className="logopicuserhome">
             <a href="/homepage">
-              <img src={logo} alt="logo" />
+              <img className="userHome" src={logo} alt="logo" />
             </a>
           </nav>
-          <ul className="nav-menu">
-            <li className="nav-item">
-              <a href="/request" className="nav-link">
+          <ul className="nav-menu-home">
+            <li className="nav-item-home">
+              <a href="/request" className="nav-link-home">
                 Make a Request
               </a>
             </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link">
+            <li className="nav-item-home">
+              <a href="#" className="nav-link-home">
                 History
               </a>
             </li>
-            <li className="nav-item">
-              <a href="/" className="nav-link">
+            <li className="nav-item-home">
+              <a href="/" className="nav-link-home">
                 Become a Driver
               </a>
             </li>
-            <li className="nav-item">
-              <a href="/contact" className="nav-link">
+            <li className="nav-item-home">
+              <a href="/contact" className="nav-link-home">
                 Contact Us
               </a>
             </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link">
+            <li className="nav-item-home">
+              <a href="#" className="nav-link-home">
                 Sign Out
               </a>
             </li>
