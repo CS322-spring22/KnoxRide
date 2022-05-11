@@ -15,11 +15,11 @@ function Request() {
   const [pickupLocation, setPickupLocation] = useState("");
   const [pickupLocation2, setPickupLocation2] = useState(""); // address pt 2
   const [pickupLocation3, setPickupLocation3] = useState(""); // city
-  const [pickupLocation4, setPickupLocation4] = useState(""); // country
+  const [pickupLocation4, setPickupLocation4] = useState("USA"); // country
   const [destination, setDestination] = useState("");
   const [destination2, setDestination2] = useState(""); // address pt 2
   const [destination3, setDestination3] = useState(""); //city
-  const [destination4, setDestination4] = useState(""); // country
+  const [destination4, setDestination4] = useState("USA"); // country
   const [paymentRange, setPaymentRange] = useState("");
   const [notes, setNotes] = useState("");
 
@@ -184,6 +184,17 @@ function Request() {
           />
         </div>
         <div className="itemReq">
+          <p className="Req">Vehicle Type</p>
+          <select className="Req">
+            value = {setVehicles}
+            required onChange={(e) => setVehicles(e.target.value)}
+            <option value={1}>Compact</option>
+            <option value={2}>SUV</option>
+            <option value={3}>Van</option>
+            <option value={4}>Pickup</option>
+          </select>
+        </div>
+        <div className="itemReq">
           <p className="Req"> Pick Up Date</p>
           <input
             className="Req"
@@ -234,15 +245,18 @@ function Request() {
               onChange={(e) => setPickupLocation3(e.target.value)}
             />
 
-            <select className="Req">
-              value = {pickupLocation4}
-              required onChange={(e) => setPickupLocation4(e.target.value)}
-              <option value>Country</option>
+            <select
+              className="Req"
+              placeholder="COUNTRY"
+              value={pickupLocation4}
+              required
+              onChange={(e) => setPickupLocation4(e.target.value)}
+            >
+              <option value>USA</option>
               <option value={1}>Russia</option>
               <option value={2}>Germany</option>
               <option value={3}>France</option>
               <option value={4}>Armenia</option>
-              <option value={5}>USA</option>
             </select>
           </div>
         </div>
@@ -259,7 +273,6 @@ function Request() {
           <input
             className="Req"
             type="text"
-            required
             value={destination2}
             placeholder="Street address line 2"
             onChange={(e) => setDestination2(e.target.value)}
@@ -289,6 +302,7 @@ function Request() {
         <div className="itemReq">
           <p className="Req"> Notes</p>
           <textarea
+            className="Req"
             rows={3}
             placeholder="Message to your driver"
             value={notes}
