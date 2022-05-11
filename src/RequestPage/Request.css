@@ -95,7 +95,7 @@ html, body {
     position: absolute;
     margin: 0;
     font-size: 4rem;
-    color: #fff;
+    color: rgb(255, 255, 255);
     z-index: 2;
     }
     form.Req {
@@ -237,8 +237,7 @@ html, body {
     justify-content: space-between;
     }
     .name-item input, .city-item input {
-   /* width: calc(50% - 20px);*/
-    width: calc(2% - 8px);
+    width: calc(50% - 20px);
     }
     .city-item select {
     width: calc(50% - 8px);

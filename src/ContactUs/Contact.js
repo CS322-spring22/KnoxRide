@@ -78,6 +78,12 @@ function ContactUs() {
           </ul>
         </nav>
       </header>
+      {
+        // HEADE ENDS HERE ,FORM STARTS
+      }
+      <div className="bannerReq">
+        <h1 className="Req">Contact Us</h1>
+      </div>
 
       <form className="Req" onSubmit={handleSubmit}>
         <div className="itemReq">

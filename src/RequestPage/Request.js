@@ -120,6 +120,10 @@ function Request() {
       {
         //HEADER ENDS HERE , BEGIN PAGE BELOW
       }
+
+      <div className="bannerReq">
+        <h1 className="Req">Make your Request</h1>
+      </div>
       <form className="Req" onSubmit={handleSubmit}>
         <div className="itemReq">
           <p className="Req">Name</p>
