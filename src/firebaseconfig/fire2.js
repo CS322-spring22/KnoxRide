@@ -1,7 +1,9 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
-//import 'firebase/compat/firestore';
-
+import 'firebase/compat/firestore';
+//import firebase from 'firebase/app';
+//import 'firebase/auth';
+//import 'firebase/firestore';
 
 
 var firebaseConfig = {
@@ -14,10 +16,36 @@ var firebaseConfig = {
     measurementId: "G-N43FYNGZVP"
 };
 
-const fire2 = firebase.initializeApp(firebaseConfig);
-//const db = fire2.firestore();
-const auth = firebase.auth();
+firebase.initializeApp(firebaseConfig);
+export const db = firebase.firestore();
+export const auth = firebase.auth();
+{/*export const createUserDocument = async (user, additionalData) => {
+    if (!user) return;
 
+    const userRef = firestore.doc(`UserProfile/${user.uid}`);
 
+    const snapshot = await userRef.get();
+    console.log(snapshot.exists);
+    if (!snapshot.exists) {
+        const { email } = user;
+        const { fname, lname, phonenumber, license, car } = additionalData;
 
-export default fire2;
+        try {
+            userRef.set({
+                fname,
+                lname,
+                email,
+                phonenumber,
+                license,
+                car,
+                createdAt: new Date()
+            });
+
+        } catch (error) {
+            console.log('Error in creating user', error);
+        }
+    }
+}
+*/}
+
+//export default fire2;

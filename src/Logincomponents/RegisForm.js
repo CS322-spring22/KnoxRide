@@ -5,38 +5,75 @@ import fire2 from '../firebaseconfig/fire2';
 import { render } from '@testing-library/react';
 
 
+class RegisForm extends Component {
+
+    state = {
+        displayName: "",
+        email: "",
+        password: "",
+        emailError: "",
+        passwordError: "",
+        setEmailError: "",
+        setPasswordError: ""
+    };
+
+
+    handleChange = (e) => {
+        const { name, value } = e.target;
+
+        this.setState({ [name]: value });
+    };
 
 
 
-function RegisForm() {
-    const fname = document.querySelector('#fname').value;
-    const lname = document.querySelector('#lname').value;
-    const email = document.querySelector('#email').value;
-    const password = document.querySelector('#password').value;
-    fire2.auth().createUserWithEmailAndPassword(email, password).then((u) => {
-        console.log('Successfully Signed Up');
-    })
-        .catch((err) => {
-            console.log('Error: ' + err.toString());
-        })
+    handleSubmit = (e) => {
+        e.preventDefault();
+
+        try {
+
+        } catch (error) {
+            switch (error.code) {
+                case "auth/invalid-email":
+                case "auth/user-disabled":
+                case "auth/user-not-found":
+                    setEmailError(error.message);
+                    break;
+                case "auth/wrong-password":
+                    setPasswordError(error.message);
+                    break;
+
+            }
+
+        };
+
+        this.setState({ displayName: '', email: '', password: '', emailError: '', passwordError: '', setEmailError: '', setPasswordError: '' });
+    };
 
 
 
 
-    return (
-        <div style={{ textAlign: 'center' }}>
+    render() {
+        const { displayName, email, password } = this.state;
+        return (
             <div>
-                <div>Email</div>
-                <input id="email" placeholder="Enter Email.." type="text" />
-            </div>
-            <div>
-                <div>Password</div>
-                <input id="password" placeholder="Enter Password.." type="text" />
-            </div>
-            <button style={{ margin: '10px' }} onClick={this.signUp}>Sign Up</button>
-        </div>
+                <form className='register' onSubmit={this.handleSubmit}>
+                    <h2>Registration</h2>
 
-    )
+                    <input type="name" name="displayName" value={displayName} onChange={this.handleChange} placeholder="Name" />
+
+                    <input type="email" name="email" value={email} onChange={this.handleChange} placeholder="Email" />
+
+                    <input type="password" name="password" value={password} onChange={this.handleChange} placeholder="Password" />
+
+                    <button>Sign Up</button>
+
+                </form>
+
+            </div>
+        )
+    }
 }
+
+
 
 export default RegisForm;

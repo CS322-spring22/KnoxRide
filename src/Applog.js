@@ -6,7 +6,7 @@ import Hero from './Hero';
 
 //import RegisForm from './Logincomponents/RegisForm';
 //import { Route, Routes } from 'react-router-dom';
-import HomePage from './HomePage';
+//import HomePage from './HomePage';
 //import { Link } from 'react-router-dom'
 
 
@@ -21,14 +21,28 @@ const Applog = () => {
   const [passwordError, setPasswordError] = useState("");
   const [hasAccount, setHasAccount] = useState(false);
 
+
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [phonenumber, setPhonenumber] = useState("");
+  const [license, setLicense] = useState("");
+  const [car, setCar] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+
   const clearInputs = () => {
     setEmail('');
     setPassword('');
+    setFname('');
+    setLname('');
+    setPhonenumber('');
+    setLicense('');
+    setCar('');
   }
 
   const clearErrors = () => {
     setEmailError('');
     setPasswordError('');
+    setPhoneError('');
   }
 
   const handleLogin = () => {
@@ -56,7 +70,7 @@ const Applog = () => {
     clearErrors();
     fire2
       .auth()
-      .createUserWithEmailAndPassword(email, password)
+      .createUserWithEmailAndPassword(email, password, fname, lname, phonenumber, license, car)
       .catch((err) => {
         switch (err.code) {
           case "auth/email-already-in-use":
@@ -65,6 +79,9 @@ const Applog = () => {
             break;
           case "auth/weak-password":
             setPasswordError(err.message);
+            break;
+          case "auth/phone-already-in-use":
+            setPhoneError(err.message);
             break;
         }
       });
@@ -106,11 +123,22 @@ const Applog = () => {
           password={password}
           setPassword={setPassword}
           handleLogin={handleLogin}
-          handleSignup={handleSignup}
+          //handleSignup={handleSignup}
           hasAccount={hasAccount}
           setHasAccount={setHasAccount}
           emailError={emailError}
           passwordError={passwordError}
+
+        //fname={fname}
+        //setFname={setFname}
+        //lname={lname}
+        //setLname={setLname}
+        //phonenumber={phonenumber}
+        //setPhonenumber={setPhonenumber}
+        //license={license}
+        //setLicense={setLicense}
+        //phoneError={phoneError}
+
 
         />
       )}
