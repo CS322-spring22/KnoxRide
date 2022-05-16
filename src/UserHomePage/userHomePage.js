@@ -39,6 +39,10 @@ function HomePage() {
           </ul>
         </nav>
       </header>
+
+      {
+        // END OF NAVBAR
+      }
       <div className="rowHome">
         <div className="columnHome">
           <h1>MY REQUESTS</h1>
