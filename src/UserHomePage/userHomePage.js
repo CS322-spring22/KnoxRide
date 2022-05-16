@@ -1,6 +1,15 @@
 import "./userHomePage.css";
 import logo from "./logopic.png";
+import { auth } from "../firebaseconfig/fire2.js";
+import { useNavigate } from "react-router-dom";
+
 function HomePage() {
+  const history = useNavigate();
+
+  const handleLogout = () => {
+    auth.signOut().then(() => history("/login"));
+  };
+
   return (
     <div className="AppUser">
       <header className="headerUser">
@@ -32,6 +41,7 @@ function HomePage() {
               </a>
             </li>
             <li className="nav-item-home">
+              <button onClick={handleLogout}> Sign Out </button>
               <a href="#" className="nav-link-home">
                 Sign Out
               </a>
