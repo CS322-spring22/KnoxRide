@@ -3,6 +3,7 @@ import LoginForm from "./Logincomponents/LoginForm";
 import "./LR.css";
 import fire2 from "./firebaseconfig/fire2";
 import Hero from "./Hero";
+import auth from "./firebaseconfig/fire2";
 
 //import RegisForm from './Logincomponents/RegisForm';
 //import { Route, Routes } from 'react-router-dom';
@@ -18,49 +19,34 @@ const Applog = () => {
   const [passwordError, setPasswordError] = useState("");
   const [hasAccount, setHasAccount] = useState(false);
 
-  const [fname, setFname] = useState("");
-  const [lname, setLname] = useState("");
-  const [phonenumber, setPhonenumber] = useState("");
-  const [license, setLicense] = useState("");
-  const [car, setCar] = useState("");
-  const [phoneError, setPhoneError] = useState("");
-
   const clearInputs = () => {
     setEmail("");
     setPassword("");
-    setFname("");
-    setLname("");
-    setPhonenumber("");
-    setLicense("");
-    setCar("");
   };
 
   const clearErrors = () => {
     setEmailError("");
     setPasswordError("");
-    setPhoneError("");
   };
 
   const handleLogin = () => {
     clearErrors();
-    fire2
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .catch((err) => {
-        switch (err.code) {
-          case "auth/invalid-email":
-          case "auth/user-disabled":
-          case "auth/user-not-found":
-            setEmailError(err.message);
-            break;
-          case "auth/wrong-password":
-            setPasswordError(err.message);
-            break;
-        }
-      });
+
+    auth.signInWithEmailAndPassword(email, password).catch((err) => {
+      switch (err.code) {
+        case "auth/invalid-email":
+        case "auth/user-disabled":
+        case "auth/user-not-found":
+          setEmailError(err.message);
+          break;
+        case "auth/wrong-password":
+          setPasswordError(err.message);
+          break;
+      }
+    });
   };
 
-  const handleSignup = () => {
+  /* const handleSignup = () => {
     clearErrors();
     fire2
       .auth()
@@ -88,7 +74,7 @@ const Applog = () => {
         }
       });
   };
-
+*/
   const handleLogout = () => {
     fire2.auth().signOut();
   };
