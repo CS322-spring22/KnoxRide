@@ -1,3 +1,17 @@
+.APLOG {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 20px;
+  background-image: linear-gradient(to bottom right, #b833dd, #060930);
+
+
+  display: flex;
+}
+
 button {
   border: none;
   outline: none;
@@ -17,8 +31,7 @@ button {
 
 }
 
-
-.LoginForm {
+/*.LOGF {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -26,14 +39,15 @@ button {
   width: 100%;
   min-height: 100vh;
   padding: 0 20px;
-  background-image: linear-gradient(to bottom right, #430752, #060930);
+  background-image: linear-gradient(to bottom right, #070009, #060930);
 
 
   display: flex;
-}
+}*/
 
-.LoginForm .LoginFormContainer {
-  padding: 60px;
+/*.LOGFContainer*/
+.LOGF {
+  padding: 70px;
   margin: auto;
   width: 100%;
   max-width: 520px;
@@ -42,21 +56,23 @@ button {
   flex-direction: column;
   justify-content: center;
   background: radial-gradient(ellipse at top right,
-      rgb(97, 5, 72) 0%,
-      rgba(78, 14, 107, 0.9) 59%,
+      rgb(10, 206, 75) 0%,
+      rgba(205, 186, 214, 0.9) 59%,
       rgba(47, 3, 91, 0.9) 100%);
   box-shadow: 0 50px 70px -20px rgba(83, 5, 150, 0.8);
 }
 
-.LoginForm .LoginFormContainer label {
-  color: white;
+/*.LOGFContainer*/
+.LOGF label {
+  color: rgb(225, 20, 20);
   margin: 14px 0;
   display: block;
   font-size: 22px;
   line-height: 1;
 }
 
-.LoginForm .LoginFormContainer input {
+/*.LOGFContainer*/
+.LOGF input {
   width: 100%;
   border: none;
   outline: none;
@@ -67,18 +83,21 @@ button {
   letter-spacing: 1px;
 }
 
-.LoginForm .LoginFormContainer .btnContainer {
+/*.LOGFContainer*/
+.LOGF.btnContainer {
   width: 100%;
   padding: 24px 0;
 }
 
-.LoginForm .LoginFormContainer .btnContainer p {
+/*.LOGFContainer*/
+.LOGF.btnContainer p {
   margin: 14px 0 0 0;
   text-align: right;
   color: rgb(184, 64, 8);
 }
 
-.LoginForm .LoginFormContainer .btnContainer p span {
+/*.LOGFContainer*/
+.LOGF.btnContainer p span {
   color: yellow;
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -87,42 +106,13 @@ button {
   transition: all 400ms ease-in-out;
 }
 
-.LoginForm .LoginFormContainer .btnContainer p span:hover {
+
+.LOGF.btnContainer p span:hover {
   color: red;
 }
 
-.LoginForm .LoginFormContainer .errorMsg {
+
+.LOGF .errorMsg {
   color: red;
   font-size: 16px;
-}
-
-
-
-
-.hero {
-  width: 100%;
-  min-height: 100vh;
-  background: radial-gradient(ellipse at left bottom,
-      rgba(22, 24, 47, 1) 0%,
-      rgba(38, 20, 72, 0.9) 59%,
-      rgba(17, 27, 75, 0.9) 100%);
-}
-
-.hero nav {
-  background: #603bbb;
-  width: 100%;
-  padding: 20px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.hero nav h2 {
-  color: #fff;
-}
-
-.hero nav button {
-  width: 86px;
-  padding: 8px 0;
-  background: #3a2b58;
 }
