@@ -1,6 +1,5 @@
 import React from "react";
 import KRlogo from "./KRlogo.png";
-import RegisForm from "./RegisForm";
 import { Link } from "react-router-dom";
 
 const LoginForm = (props) => {
@@ -52,7 +51,7 @@ const LoginForm = (props) => {
 
           <>
             {
-              <Link to="../RegisForm">
+              <Link to="../Register">
                 <button>Register</button>
               </Link>
             }
