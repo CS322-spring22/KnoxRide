@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import KRlogo from './KRlogo.png';
+import React, { useState } from "react";
+import KRlogo from "./KRlogo.png";
 
-import fire2 from '../firebaseconfig/fire2';
-import { render } from '@testing-library/react';
-
+import fire2 from "../firebaseconfig/fire2";
+import { render } from "@testing-library/react";
+/*
 
 class RegisForm extends Component {
 
@@ -77,3 +77,4 @@ class RegisForm extends Component {
 
 
 export default RegisForm;
+*/

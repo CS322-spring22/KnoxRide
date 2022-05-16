@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import LoginForm from "./Logincomponents/LoginForm";
 import "./LR.css";
-import fire2 from "./firebaseconfig/fire2";
 import Hero from "./Hero";
-import auth from "./firebaseconfig/fire2";
+import { auth } from "./firebaseconfig/fire2";
 
 //import RegisForm from './Logincomponents/RegisForm';
 //import { Route, Routes } from 'react-router-dom';
@@ -76,11 +75,11 @@ const Applog = () => {
   };
 */
   const handleLogout = () => {
-    fire2.auth().signOut();
+    auth.signOut();
   };
 
   const authListener = () => {
-    fire2.auth().onAuthStateChanged((user) => {
+    auth.onAuthStateChanged((user) => {
       if (user) {
         clearInputs();
         setUser(user);
