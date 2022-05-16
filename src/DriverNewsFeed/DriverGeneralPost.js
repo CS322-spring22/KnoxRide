@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './DriverGeneralPost.css';
 import { Avatar } from '@material-ui/core';
 import DoneIcon from '@mui/icons-material/Done';
-import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import AcceptPopUp from "./AcceptPopUp";
 
 function DriverGeneralPost({ name, email, phoneNumber, numberOfPassengers, vehicles, pickupTime, pickupLocation, destination, paymentRange, notes }) {
-    console.log("testing", name);
+    const [buttonPopup, setButtonPopup] = useState(false);
+    const [accept, setAccept] = useState(false);
+
     return (
         <div className="driverGeneralPost">
 
@@ -52,30 +54,26 @@ function DriverGeneralPost({ name, email, phoneNumber, numberOfPassengers, vehic
 
             </div>
 
-            {/* <div className="driver_genPost_image">
-                <img src={ image } alt="" />
-            </div> */}
-
             <div className="driver_genPost_options">
 
-                <div className="driver_genPost_option">
-                    <DoneIcon />
-                    <p>Accept</p>
+                <div className="driver_genPost_option" onClick={() => setAccept(true)}>
+                    <div className="driver_genPost_option">
+                        <DoneIcon />
+                        <p>Accept</p>
+                    </div>
+                    <AcceptPopUp open={buttonPopup} setTrigger={setButtonPopup}>
+                        <label>Money: </label>
+                        <input></input>
+                    </AcceptPopUp>
                 </div>
-
-                <div className="driver_genPost_option">
-                    <ChatBubbleIcon />
-                    <p>Negotiate</p>
-                </div>
-
+    
                 <div className="driver_genPost_option">
                     <BookmarkBorderIcon />
                     <p>Save</p>
                 </div>
-
             </div>
         </div>
-    )
+    );
 }
 
 export default DriverGeneralPost

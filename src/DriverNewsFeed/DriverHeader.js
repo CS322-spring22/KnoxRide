@@ -1,25 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./DriverHeader.css";
 import SearchIcon from '@mui/icons-material/Search';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
-import EventNoteIcon from '@mui/icons-material/EventNote';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
-import NotificationsIcon from '@mui/icons-material/Notifications';
+import SettingsIcon from '@mui/icons-material/Settings';
+import LogoutIcon from '@mui/icons-material/Logout';
+import PersonIcon from '@mui/icons-material/Person';
 import { Avatar, IconButton } from '@material-ui/core';
 import { Link } from "react-router-dom";
+import KRlogo from '../Logincomponents/KRlogo.png';
+import fire2 from '../firebaseconfig/fire2';
 
 function DriverHeader() {
+    const [revealText, setRevealText] = useState(false);
+    const onHover = () => {
+        setRevealText(true);
+    }
+    const onLeave = () => {
+        setRevealText(false);
+    }
+    const handleLogout = () => {
+        fire2.auth().signOut();
+    }
 
     return (
         <div className="driver_header">
             <div className="driver_header_left">
                 <img id="driverheader_logo"
-                src="https://static.hudl.com/users/prod/2372066_cf6c61999a9f4bb395b2fd9ff5991224.jpg"
-                alt="Knox Ride Logo"
+                src={KRlogo} alt="Knox Ride Logo"
                 />
+
                 <div className="driver_header_avatar">
-                    <Link to = "/driverprofile">
+                    <Link to ="/">
                         <IconButton>
                             <Avatar src="" fontSize="large"/>
                         </IconButton>
@@ -40,38 +51,33 @@ function DriverHeader() {
 
 
             <div className="driver_header_right">
-                <Link to = "/">
-                    <IconButton>
-                        <AssignmentIndIcon fontSize="large" className="driver_header_right_option"/>
+                <Link to = "/driverprofile">
+                    <IconButton onMouseEnter={onHover} onMouseLeave={onLeave}>
+                        {revealText ? "Driver's Profile" : <AssignmentIndIcon fontSize="large" className="driver_header_right_option"/>}
                     </IconButton>
                 </Link>
 
-                <Link to = "/driverschedule">
-                    <IconButton>
-                        <EventNoteIcon fontSize="large" className="driver_header_right_option"/>
+                <Link to ="/homepage">
+                    <IconButton onMouseEnter={onHover} onMouseLeave={onLeave}>
+                        {revealText ? "Switch To User" : <PersonIcon fontSize="large" className="driver_header_right_option"/>}
                     </IconButton>
                 </Link>
-                
-                <IconButton>
-                    <ChatBubbleIcon fontSize="large" className="driver_header_right_option"/>
-                </IconButton>
 
-                <IconButton>
-                    <NotificationsIcon fontSize="large" className="driver_header_right_option"/>
-                </IconButton>
+                <Link to ="#">
+                    <IconButton onMouseEnter={onHover} onMouseLeave={onLeave}>
+                        {revealText ? "Settings" :<SettingsIcon fontSize="large" className="driver_header_right_option"/>}
+                    </IconButton>
+                </Link>
 
-                <IconButton>
-                    <ArrowDropDownIcon fontSize="large" className="driver_header_right_option"/>
-                    {/* options inside drop down menu:
-                    1. account (edit information in profile page) 
-                    2. ride history (future rides, Now, Past rides)
-                    3. settings
-                    4. log out 
-                    */}
-                </IconButton>
+                <Link to ="#">
+                    <IconButton onMouseEnter={onHover} onMouseLeave={onLeave} onClick={handleLogout}>
+                        {revealText ? "Log Out" :<LogoutIcon fontSize="large" className="driver_header_right_option"/>}
+                    </IconButton>
+                </Link>
+
             </div>           
         </div>
-    )
+    );
 }
 
 export default DriverHeader
