@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./UserHomePage/userHomePage.js";
 import DriverFeed from "./DriverNewsFeed/DriverFeed";
-import DriverSchedulePage from "./DriverSchedule/DriverSchedulePage";
+//import DriverSchedulePage from "./DriverSchedule/DriverSchedulePage";
 import Applog from "./Applog";
 import Request from "./RequestPage/Request.js";
 import Contact from "./ContactUs/Contact.js";
