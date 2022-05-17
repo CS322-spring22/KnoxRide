@@ -31,7 +31,7 @@ function HomePage() {
               </a>
             </li>
             <li className="nav-item-home">
-              <a href="/" className="nav-link-home">
+              <a href="/driverfeed" className="nav-link-home">
                 Become a Driver
               </a>
             </li>
@@ -60,9 +60,6 @@ function HomePage() {
 
         <div className="columnHome">
           <h1>PENDING</h1>
-        </div>
-        <div className="columnHome">
-          <h1>SOMETHING HERE</h1>
         </div>
       </div>
     </div>

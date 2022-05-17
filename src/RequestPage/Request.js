@@ -108,7 +108,7 @@ function Request() {
               </a>
             </li>
             <li className="nav-item-contact">
-              <a href="/" className="nav-link-contact">
+              <a href="/driverfeed" className="nav-link-contact">
                 Become a Driver
               </a>
             </li>
