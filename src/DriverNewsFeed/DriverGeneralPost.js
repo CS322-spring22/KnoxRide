@@ -2,11 +2,11 @@ import React from 'react';
 import './DriverGeneralPost.css';
 import { Avatar } from '@material-ui/core';
 import DoneIcon from '@mui/icons-material/Done';
-import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 
+
 function DriverGeneralPost({ name, email, phoneNumber, numberOfPassengers, vehicles, pickupTime, pickupLocation, destination, paymentRange, notes }) {
-    console.log("testing", name);
+
     return (
         <div className="driverGeneralPost">
 
@@ -51,31 +51,23 @@ function DriverGeneralPost({ name, email, phoneNumber, numberOfPassengers, vehic
                 <p>{ notes }</p>
 
             </div>
-
-            {/* <div className="driver_genPost_image">
-                <img src={ image } alt="" />
-            </div> */}
-
+                
             <div className="driver_genPost_options">
 
                 <div className="driver_genPost_option">
-                    <DoneIcon />
-                    <p>Accept</p>
+                    <div className="driver_genPost_option" >
+                        <DoneIcon />
+                        <p>Accept</p>
+                    </div>
                 </div>
-
-                <div className="driver_genPost_option">
-                    <ChatBubbleIcon />
-                    <p>Negotiate</p>
-                </div>
-
+    
                 <div className="driver_genPost_option">
                     <BookmarkBorderIcon />
                     <p>Save</p>
                 </div>
-
             </div>
         </div>
-    )
+    );
 }
 
 export default DriverGeneralPost

@@ -58,6 +58,7 @@
 
 .driver_header_right_option {
   color: white;
+  
 }
 
 .driver_header_right_option:hover {
@@ -66,3 +67,9 @@
   padding: 5px;
   filter: brightness(1.2);
 }
+
+.headerLogout_btn {
+  background-color: #4f3276;
+  padding: 5px;
+}
+

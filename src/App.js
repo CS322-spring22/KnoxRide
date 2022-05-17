@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 
 function App() {
   const noDriverHeaderArray = [
-    "/login",
+    "/",
     "/homepage",
     "/request",
     "/contact",
