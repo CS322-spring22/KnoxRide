@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./DriverFeed.css";
 import DriverGeneralPost from "./DriverGeneralPost";
-import DriverSideBar from "../DriverProfile/DriverSideBar";
 import { db } from "../firebaseconfig/fire2";
 
 function DriverFeed() {
