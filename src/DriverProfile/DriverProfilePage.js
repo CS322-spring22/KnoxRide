@@ -1,47 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import "./DriverProfilePage.css";
-import DriverGeneralPost from "../DriverNewsFeed/DriverGeneralPost";
+import React, { useState, useEffect } from 'react'
 import { db } from "../firebaseconfig/fire2";
+import DriverProfileForm from "./DriverProfileForm";
+
+import DriverSideBar from "./DriverSideBar";
 
 function DriverProfilePage() {
-    const [userRequest, setUserRequest] = useState([]);
+    const [UserProfile, setUserProfile] = useState([]);
 
     useEffect(() => {
-        
-        db.collection('userRequest').get()
-            .then((res) => {
-                const temp = [];
-                res.forEach((snapshot) => temp.push(snapshot.data()));
-                console.log(temp);
-                setUserRequest([...temp])   
-            })
-        
-         
+        db.collection('UserProfile').get()
+        .then((res) => {
+            const temp1 = [];
+            res.forEach((snapshot) => temp1.push(snapshot.data()));
+            setUserProfile([...temp1])
+        })
     }, []);
 
     return (
         <div className="driver_profile">
+            <DriverSideBar />
             <div className="driver_profile_body">
-                {userRequest.map((userRequest) => {
-                console.log(userRequest.name);
+                {UserProfile.map((UserProfile) => {
+                console.log(UserProfile.fname);
                 return (
                     <div>
-                    <DriverGeneralPost
-                        name={userRequest.name}
-                        email={userRequest.email}
-                        phoneNumber={userRequest.phoneNumber}
-                        numberOfPassengers={userRequest.numberOfPassengers}
-                        vehicles={userRequest.vehicles}
-                        pickupTime={userRequest.pickupTime}
-                        pickupLocation={userRequest.pickupLocation}
-                        destination={userRequest.destination}
-                        paymentRange={userRequest.paymentRange}
-                        notes={userRequest.notes}
-                    />
+                        <DriverProfileForm
+                            fname={UserProfile.fname}
+                            fname={UserProfile.lname}
+                            phonenumber={UserProfile.phonenumber}
+                            car={UserProfile.car}
+                            license={UserProfile.license}
+                        />
                     </div>
                 )})}
             </div>
         </div>
     );
 }
+
 export default DriverProfilePage
+

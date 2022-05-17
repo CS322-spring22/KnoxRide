@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './DriverGeneralPost.css';
 import { Avatar } from '@material-ui/core';
 import DoneIcon from '@mui/icons-material/Done';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+
 
 function DriverGeneralPost({ name, email, phoneNumber, numberOfPassengers, vehicles, pickupTime, pickupLocation, destination, paymentRange, notes }) {
 
@@ -50,11 +51,11 @@ function DriverGeneralPost({ name, email, phoneNumber, numberOfPassengers, vehic
                 <p>{ notes }</p>
 
             </div>
-
+                
             <div className="driver_genPost_options">
 
                 <div className="driver_genPost_option">
-                    <div className="driver_genPost_option">
+                    <div className="driver_genPost_option" >
                         <DoneIcon />
                         <p>Accept</p>
                     </div>

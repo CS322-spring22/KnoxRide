@@ -8,7 +8,6 @@ import PersonIcon from '@mui/icons-material/Person';
 import { Avatar, IconButton } from '@material-ui/core';
 import { Link } from "react-router-dom";
 import KRlogo from '../Logincomponents/KRlogo.png';
-import fire2 from '../firebaseconfig/fire2';
 
 function DriverHeader() {
     const [revealText, setRevealText] = useState(false);
@@ -17,9 +16,6 @@ function DriverHeader() {
     }
     const onLeave = () => {
         setRevealText(false);
-    }
-    const handleLogout = () => {
-        fire2.auth().signOut();
     }
 
     return (
@@ -70,7 +66,7 @@ function DriverHeader() {
                 </Link>
 
                 <Link to ="#">
-                    <IconButton onMouseEnter={onHover} onMouseLeave={onLeave} onClick={handleLogout}>
+                    <IconButton onMouseEnter={onHover} onMouseLeave={onLeave} >
                         {revealText ? "Log Out" :<LogoutIcon fontSize="large" className="driver_header_right_option"/>}
                     </IconButton>
                 </Link>
