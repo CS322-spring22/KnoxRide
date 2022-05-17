@@ -10,7 +10,7 @@ function ContactUs() {
   const history = useNavigate();
 
   const handleLogout = () => {
-    auth.signOut().then(() => history("/login"));
+    auth.signOut().then(() => history("/"));
   };
 
   const [name, setName] = useState("");

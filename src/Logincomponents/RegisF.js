@@ -162,25 +162,19 @@ const RegisF = () => {
           value={car}
           onChange={(e) => setCar(e.target.value)}
         />
-        <br>
-
-        </br>
+        <br></br>
 
         <div className="btnContainer">
           {/*{hasAccount ? (*/}
           <>
             <button onClick={handleSignup}>Register</button>
-            <br>
-
-
-            </br>
+            <br></br>
           </>
-          <br>
-          </br>
+          <br></br>
           {/*}) : (*/}
           <div className="btnSignUp"></div>
           <>
-            <Link to="../login">
+            <Link to="../">
               <button>Login</button>
               {/*<p>Have An Account? <span onClick={() => setHasAccount(!hasAccount)}>Sign In</span></p>*/}
             </Link>
