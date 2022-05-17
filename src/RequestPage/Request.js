@@ -119,8 +119,7 @@ function Request() {
             </li>
             <li className="nav-item-contact">
               <button className="button-nav-link" onClick={handleLogout}>
-                {" "}
-                Sign Out{" "}
+                Sign Out
               </button>
             </li>
           </ul>
@@ -135,14 +134,14 @@ function Request() {
       </div>
       <form className="Req" onSubmit={handleSubmit}>
         <div className="itemReq">
-          <p className="Req">Name</p>
+          <p className="Req">Name *</p>
           <div className="name-item">
             <input
               className="Req"
               type="text"
               value={name}
               required
-              placeholder="name"
+              placeholder="name *"
               onChange={(e) => setName(e.target.value)}
             />
             <input
@@ -150,7 +149,7 @@ function Request() {
               type="text"
               value={lastName}
               required
-              placeholder="Last name"
+              placeholder="Last name *"
               onChange={(e) => setLastName(e.target.value)}
             />
           </div>
@@ -162,7 +161,7 @@ function Request() {
             className="Req"
             value={email}
             type="text"
-            placeholder="Email"
+            placeholder="Email *"
             required
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -173,7 +172,7 @@ function Request() {
           <input
             className="Req"
             value={phoneNumber}
-            type="tel"
+            type="tel *"
             required
             placeholder="Phone Number"
             onChange={(e) => setPhoneNumber(e.target.value)}
@@ -187,13 +186,13 @@ function Request() {
             type="number"
             required
             min="1"
-            placeholder="Number of Passengers"
+            placeholder="Number of Passengers *"
             value={numberOfPassengers}
             onChange={(e) => setNumberOfPassengers(e.target.value)}
           />
         </div>
         <div className="itemReq">
-          <p className="Req">Vehicle Type</p>
+          <p className="Req">Vehicle Type *</p>
           <select className="Req">
             value = {setVehicles}
             required onChange={(e) => setVehicles(e.target.value)}
@@ -204,7 +203,7 @@ function Request() {
           </select>
         </div>
         <div className="itemReq">
-          <p className="Req"> Pick Up Date</p>
+          <p className="Req"> Pick Up Date *</p>
           <input
             className="Req"
             type="date"
@@ -216,7 +215,7 @@ function Request() {
         </div>
 
         <div className="itemReq">
-          <p className="Req">Pick Up Time &nbsp; &nbsp;hh:mm: AM/PM-</p>
+          <p className="Req">Pick Up Time *&nbsp; &nbsp;hh:mm: AM/PM-</p>
           <input
             className="Req"
             type="time"
@@ -228,13 +227,13 @@ function Request() {
         </div>
 
         <div className="itemReq">
-          <p className="Req"> Pick Up Point</p>
+          <p className="Req"> Pick Up Point </p>
           <input
             className="Req"
             type="text"
             value={pickupLocation}
             required
-            placeholder="Street address"
+            placeholder="Street address *"
             onChange={(e) => setPickupLocation(e.target.value)}
           />
           <input
@@ -250,7 +249,7 @@ function Request() {
               type="text"
               value={pickupLocation3}
               required
-              placeholder="City"
+              placeholder="City *"
               onChange={(e) => setPickupLocation3(e.target.value)}
             />
 
@@ -276,7 +275,7 @@ function Request() {
             type="text"
             required
             value={destination}
-            placeholder="Street address"
+            placeholder="Street address *"
             onChange={(e) => setDestination(e.target.value)}
           />
           <input
@@ -292,7 +291,7 @@ function Request() {
               type="text"
               required
               value={destination3}
-              placeholder="City"
+              placeholder="City *"
               onChange={(e) => setDestination3(e.target.value)}
             />
 
