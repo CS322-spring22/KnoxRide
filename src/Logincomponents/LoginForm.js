@@ -40,12 +40,10 @@ const LoginForm = (props) => {
         <div className="btnContainer">
           {/*{hasAccount ? (*/}
           <>
-            <button className="LoginButton" onClick={handleLogin}>
-              Sign In
-            </button>
+            <button onClick={handleLogin}>Sign In</button>
             <p>
               Don't Have An Account?{" "}
-              <span onClick={() => setHasAccount(!hasAccount)}>Sign up</span>
+              {/* <span onClick={() => setHasAccount(!hasAccount)}>Sign up</span>*/}
             </p>
           </>
 
@@ -54,7 +52,7 @@ const LoginForm = (props) => {
           <>
             {
               <Link to="../Register">
-                <button className="LoginButton">Register</button>
+                <button>Register</button>
               </Link>
             }
           </>
