@@ -150,6 +150,7 @@ function ContactUs() {
           </div>
         </div>
         <button
+          className="requestButton"
           type="submit"
           style={{ background: loader ? "#ccc" : "rgb(2, 2, 110)" }}
         >
