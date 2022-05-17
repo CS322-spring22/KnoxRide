@@ -68,3 +68,8 @@
   filter: brightness(1.2);
 }
 
+.headerLogout_btn {
+  background-color: #4f3276;
+  padding: 5px;
+}
+

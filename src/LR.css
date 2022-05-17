@@ -1,3 +1,11 @@
+.Applog {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+
+}
+
 button {
   border: none;
   outline: none;
@@ -10,25 +18,14 @@ button {
   cursor: pointer;
 }
 
-.KR-logo {
-  height: 25vh;
-  width: 25vh;
-  pointer-events: none;
-
-}
-
-
 .LoginForm {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Nunito", sans-serif;
   width: 100%;
   min-height: 100vh;
   padding: 0 20px;
-  background-image: linear-gradient(to bottom right, #430752, #060930);
-
-
+  background: radial-gradient(ellipse at left bottom,
+      rgb(72, 1, 134) 0%,
+      rgb(101, 13, 164) 66%,
+      rgba(132, 73, 190, 0.912) 100%);
   display: flex;
 }
 
@@ -41,11 +38,11 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: radial-gradient(ellipse at top right,
-      rgb(97, 5, 72) 0%,
-      rgba(78, 14, 107, 0.9) 59%,
-      rgba(47, 3, 91, 0.9) 100%);
-  box-shadow: 0 50px 70px -20px rgba(83, 5, 150, 0.8);
+  background: radial-gradient(ellipse at left bottom,
+      rgb(107, 4, 197) 0%,
+      rgb(241, 114, 17) 59%,
+      rgba(186, 55, 230, 0.9) 100%);
+  box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
 }
 
 .LoginForm .LoginFormContainer label {
@@ -62,8 +59,8 @@ button {
   outline: none;
   font-size: 19px;
   padding: 10px;
-  background: rgba(27, 211, 231, 0.1);
-  color: rgb(244, 244, 244);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
   letter-spacing: 1px;
 }
 
@@ -75,7 +72,7 @@ button {
 .LoginForm .LoginFormContainer .btnContainer p {
   margin: 14px 0 0 0;
   text-align: right;
-  color: rgb(184, 64, 8);
+  color: #fff;
 }
 
 .LoginForm .LoginFormContainer .btnContainer p span {
@@ -94,35 +91,4 @@ button {
 .LoginForm .LoginFormContainer .errorMsg {
   color: red;
   font-size: 16px;
-}
-
-
-
-
-.hero {
-  width: 100%;
-  min-height: 100vh;
-  background: radial-gradient(ellipse at left bottom,
-      rgba(22, 24, 47, 1) 0%,
-      rgba(38, 20, 72, 0.9) 59%,
-      rgba(17, 27, 75, 0.9) 100%);
-}
-
-.hero nav {
-  background: #603bbb;
-  width: 100%;
-  padding: 20px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.hero nav h2 {
-  color: #fff;
-}
-
-.hero nav button {
-  width: 86px;
-  padding: 8px 0;
-  background: #3a2b58;
 }

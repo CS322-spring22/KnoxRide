@@ -1,0 +1,238 @@
+.Con {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 20px;
+    background-image: linear-gradient(to bottom right, #b833dd, #060930);
+
+
+    display: flex;
+}
+
+button.LoginButton {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: #603bbb;
+    cursor: pointer;
+}
+
+.KR-logo {
+    height: 25vh;
+    width: 25vh;
+    pointer-events: none;
+
+}
+
+/*.LOGF {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 20px;
+    background-image: linear-gradient(to bottom right, #070009, #060930);
+  
+  
+    display: flex;
+  }*/
+
+/*.LOGFContainer*/
+.RegisF {
+    padding: 70px;
+    margin: auto;
+    width: 100%;
+    max-width: 520px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: radial-gradient(ellipse at top right,
+            rgb(5, 201, 71) 0%,
+            rgb(8, 143, 143) 59%,
+            rgba(10, 101, 45, 0.9) 100%);
+    box-shadow: 0 50px 70px -20px rgba(83, 5, 150, 0.8);
+}
+
+/*.LOGFContainer*/
+.RegisF label {
+    color: rgb(23, 20, 225);
+    margin: 14px 0;
+    display: block;
+    font-size: 22px;
+    line-height: 1;
+}
+
+/*.LOGFContainer*/
+.RegisF input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 19px;
+    padding: 10px;
+    background: rgba(27, 211, 231, 0.1);
+    color: rgb(244, 244, 244);
+    letter-spacing: 1px;
+}
+
+/*.LOGFContainer*/
+.RegisF.btnContainer {
+    width: 100%;
+    padding: 24px 0;
+}
+
+/*.LOGFContainer*/
+.RegisF.btnContainer p {
+    margin: 14px 0 0 0;
+    text-align: right;
+    color: rgb(184, 64, 8);
+}
+
+/*.LOGFContainer*/
+.RegisF.btnContainer p span {
+    color: yellow;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+
+
+.RegisF.btnContainer p span:hover {
+    color: red;
+}
+
+
+.RegisF .errorMsg {
+    color: red;
+    font-size: 16px;
+}
+
+/*
+.Applog {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 20px;
+    background-image: linear-gradient(to bottom right, #b833dd, #060930);
+  
+  
+    display: flex;
+  }
+  
+  button {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: #603bbb;
+    cursor: pointer;
+  }
+  
+  .KR-logo {
+    height: 25vh;
+    width: 25vh;
+    pointer-events: none;
+  
+  }
+  
+  /*.LOGF {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 20px;
+    background-image: linear-gradient(to bottom right, #070009, #060930);
+  
+  
+    display: flex;
+  
+  
+  
+  .LoginFormContainer {
+    padding: 70px;
+    margin: auto;
+    width: 100%;
+    max-width: 520px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: radial-gradient(ellipse at top right,
+        rgb(10, 206, 75) 0%,
+        rgba(205, 186, 214, 0.9) 59%,
+        rgba(47, 3, 91, 0.9) 100%);
+    box-shadow: 0 50px 70px -20px rgba(83, 5, 150, 0.8);
+  }
+  
+  /*.LOGFContainer
+  .LoginForm.LoginFormContainer label {
+    color: rgb(225, 20, 20);
+    margin: 14px 0;
+    display: block;
+    font-size: 22px;
+    line-height: 1;
+  }
+  
+  /*.LOGFContainer
+  .LoginForm.LoginFormContainer input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 19px;
+    padding: 10px;
+    background: rgba(27, 211, 231, 0.1);
+    color: rgb(244, 244, 244);
+    letter-spacing: 1px;
+  }
+  
+  /*.LOGFContainer
+  .LoginForm.LoginFormContainer.btnContainer {
+    width: 100%;
+    padding: 24px 0;
+  }
+  
+  /*.LOGFContainer
+  .LoginForm.LoginFormContainer.btnContainer p {
+    margin: 14px 0 0 0;
+    text-align: right;
+    color: rgb(184, 64, 8);
+  }
+  
+  /*.LOGFContainer
+  .LoginForm.LoginFormContainer.btnContainer p span {
+    color: yellow;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+  }
+  
+  
+  .LoginForm.LoginFormContainer.btnContainer p span:hover {
+    color: red;
+  }
+  
+  
+  .LoginForm.LoginFormContainer .errorMsg {
+    color: red;
+    font-size: 16px;
+  }*/

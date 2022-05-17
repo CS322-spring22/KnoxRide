@@ -6,17 +6,16 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
 import PersonIcon from '@mui/icons-material/Person';
 import { Avatar, IconButton } from '@material-ui/core';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import KRlogo from '../Logincomponents/KRlogo.png';
+import { auth } from "../firebaseconfig/fire2.js";
 
 function DriverHeader() {
-    const [revealText, setRevealText] = useState(false);
-    const onHover = () => {
-        setRevealText(true);
-    }
-    const onLeave = () => {
-        setRevealText(false);
-    }
+    const history = useNavigate();
+
+    const handleLogout = () => {
+        auth.signOut().then(() => history("/"));
+    };
 
     return (
         <div className="driver_header">
@@ -26,7 +25,7 @@ function DriverHeader() {
                 />
 
                 <div className="driver_header_avatar">
-                    <Link to ="/">
+                    <Link to ="/driverfeed">
                         <IconButton>
                             <Avatar src="" fontSize="large"/>
                         </IconButton>
@@ -48,29 +47,30 @@ function DriverHeader() {
 
             <div className="driver_header_right">
                 <Link to = "/driverprofile">
-                    <IconButton onMouseEnter={onHover} onMouseLeave={onLeave}>
-                        {revealText ? "Driver's Profile" : <AssignmentIndIcon fontSize="large" className="driver_header_right_option"/>}
+                    <IconButton >
+                        <AssignmentIndIcon fontSize="large" className="driver_header_right_option"/>
                     </IconButton>
                 </Link>
 
                 <Link to ="/homepage">
-                    <IconButton onMouseEnter={onHover} onMouseLeave={onLeave}>
-                        {revealText ? "Switch To User" : <PersonIcon fontSize="large" className="driver_header_right_option"/>}
+                    <IconButton >
+                        <PersonIcon fontSize="large" className="driver_header_right_option"/>
                     </IconButton>
                 </Link>
 
                 <Link to ="#">
-                    <IconButton onMouseEnter={onHover} onMouseLeave={onLeave}>
-                        {revealText ? "Settings" :<SettingsIcon fontSize="large" className="driver_header_right_option"/>}
+                    <IconButton >
+                        <SettingsIcon fontSize="large" className="driver_header_right_option"/>
                     </IconButton>
                 </Link>
 
-                <Link to ="#">
-                    <IconButton onMouseEnter={onHover} onMouseLeave={onLeave} >
-                        {revealText ? "Log Out" :<LogoutIcon fontSize="large" className="driver_header_right_option"/>}
-                    </IconButton>
-                </Link>
+                {/* <IconButton >
+                    <LogoutIcon fontSize="large" className="driver_header_right_option" onClick={handleLogout}/>
+                </IconButton> */}
 
+                <button className="headerLogout_btn" onClick={handleLogout}>
+                    <LogoutIcon fontSize="large" className="driver_header_right_option" />
+                </button>
             </div>           
         </div>
     );

@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.AppUser > html {
+.AppUserContact > html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
 }
@@ -23,12 +23,12 @@ a {
   border-bottom: 10px solid #05336e;
  /* background-color: #1d65ac; */
 }
-img {
+img.userContactLogo {
   width: auto;
   max-height: 100%;
 }
 
-.navbarUser {
+.navbarUserContact {
   display: flex;
   justify-content: space-between;
   align-items: flex;
@@ -36,10 +36,6 @@ img {
   max-height: 100%;
   max-width: 100%;
   background-color:#ffb6e1;
-}
-img {
-  max-width: 120%;
-  max-height: 120%;
 }
 .logopic {
   height: 50px;
@@ -56,14 +52,14 @@ img {
   background-color: #6e88d8;
 }
 
-.nav-menu {
+.nav-menu-contact {
   display: flex;
   /*justify-content: space-between;*/
   align-items: center;
   
 }
 
-.nav-item {
+.nav-item-contact {
   list-style: none;
   margin-left: 1rem;
   text-align: center;
@@ -71,14 +67,14 @@ img {
   
 }
 
-.nav-link {
+.nav-link-contact {
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 300;
   color: #190060;
   text-align: center;
 }
-.nav-item:hover{
+.nav-item-contact:hover{
   background-color: #84f5ff;
   color:#d20606;
 }
@@ -88,8 +84,17 @@ img {
   background-color: #eca310; 
 }
 */
-.nav-logo {
+.nav-logo-contact {
   font-size: 2.1rem;
   font-weight: 500;
   color: #e0364a;
 }
+
+.name-item-contact{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  }
+  .name-item-contact input{
+  width: calc(50% - 20px);
+  }
