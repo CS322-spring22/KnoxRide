@@ -69,6 +69,21 @@ img.userHome {
   color: #190060;
   text-align: center;
 }
+
+
+button.button-nav-link {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #190060;
+  text-align: center;
+  background-color: #ffb6e1;
+}
+.button-nav-link:hover{
+  background-color: #84f5ff;
+  color:#190060;
+}
+
 .nav-item-home:hover{
   background-color: #84f5ff;
   color:#d20606;

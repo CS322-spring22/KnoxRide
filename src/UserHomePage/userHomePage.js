@@ -41,10 +41,10 @@ function HomePage() {
               </a>
             </li>
             <li className="nav-item-home">
-              <button onClick={handleLogout}> Sign Out </button>
-              <a href="#" className="nav-link-home">
-                Sign Out
-              </a>
+              <button className="button-nav-link" onClick={handleLogout}>
+                {" "}
+                Sign Out{" "}
+              </button>
             </li>
           </ul>
         </nav>

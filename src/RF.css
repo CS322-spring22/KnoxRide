@@ -12,7 +12,7 @@
     display: flex;
 }
 
-button {
+button.LoginButton {
     border: none;
     outline: none;
     width: 100%;

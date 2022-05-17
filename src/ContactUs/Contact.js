@@ -3,8 +3,16 @@ import React, { useState } from "react";
 import logo from "../UserHomePage/logopic.png";
 import "../RequestPage/Request.css";
 import { db } from "../firebaseconfig/fire2";
+import { auth } from "../firebaseconfig/fire2.js";
+import { useNavigate } from "react-router-dom";
 
 function ContactUs() {
+  const history = useNavigate();
+
+  const handleLogout = () => {
+    auth.signOut().then(() => history("/login"));
+  };
+
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -71,9 +79,10 @@ function ContactUs() {
               </a>
             </li>
             <li className="nav-item-contact">
-              <a href="#" className="nav-link-contact">
-                Sign Out
-              </a>
+              <button className="button-nav-link" onClick={handleLogout}>
+                {" "}
+                Sign Out{" "}
+              </button>
             </li>
           </ul>
         </nav>

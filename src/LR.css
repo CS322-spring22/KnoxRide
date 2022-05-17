@@ -11,7 +11,7 @@
 
   display: flex;
 }
-
+/*
 button {
   border: none;
   outline: none;
@@ -23,7 +23,7 @@ button {
   background: #603bbb;
   cursor: pointer;
 }
-
+*/
 .KR-logo {
   height: 25vh;
   width: 25vh;
