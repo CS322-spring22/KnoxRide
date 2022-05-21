@@ -8,7 +8,9 @@ function DriverFeed() {
 
     useEffect(() => {
         
-        db.collection('userRequest').get()
+        db.collection('userRequest')
+            .orderBy("timeStamp", "desc")
+            .get()
             .then((res) => {
                 const temp = [];
                 res.forEach((snapshot) => temp.push(snapshot.data()));
@@ -22,18 +24,22 @@ function DriverFeed() {
         <div className="driver_feed">
             <div className="driver_feed_body">
                 {userRequest.map((userRequest) => {
-                console.log(userRequest.name);
                 return (
                     <div>
                         <DriverGeneralPost
                             name={userRequest.name}
+                            lastName= {userRequest.lastName}
                             email={userRequest.email}
                             phoneNumber={userRequest.phoneNumber}
                             numberOfPassengers={userRequest.numberOfPassengers}
-                            vehicles={userRequest.vehicles}
+                            pickupDate= {userRequest.pickupDate}
                             pickupTime={userRequest.pickupTime}
                             pickupLocation={userRequest.pickupLocation}
+                            pickupLocation2={userRequest.pickupLocation2}
+                            pickupLocation3={userRequest.pickupLocation3}
                             destination={userRequest.destination}
+                            destination2={userRequest.destination2}
+                            destination3={userRequest.destination3}
                             paymentRange={userRequest.paymentRange}
                             notes={userRequest.notes}
                         />

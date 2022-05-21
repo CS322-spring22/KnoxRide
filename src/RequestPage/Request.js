@@ -4,6 +4,8 @@ import logo from "../UserHomePage/logopic.png";
 import "./Request.css";
 import { auth } from "../firebaseconfig/fire2.js";
 import { useNavigate } from "react-router-dom";
+import { serverTimestamp } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 
 function Request() {
   const history = useNavigate();
@@ -37,16 +39,23 @@ function Request() {
     e.preventDefault();
     setLoader(true);
 
+    const auth = getAuth();
+    const user = auth.currentUser;
+
     db.collection("userRequest")
       .add({
+        uid: user.uid,
+        timeStamp: serverTimestamp(),
         name: name,
         lastName: lastName,
         email: email,
         phoneNumber: phoneNumber,
         numberOfPassengers: numberOfPassengers,
         vehicles: vehicles,
+
         pickupTime: pickupTime,
         pickupDate: pickupDate,
+
         pickupLocation: pickupLocation,
         pickupLocation2: pickupLocation2,
         pickupLocation3: pickupLocation3,
@@ -193,9 +202,11 @@ function Request() {
         </div>
         <div className="itemReq">
           <p className="Req">Vehicle Type *</p>
-          <select className="Req">
+          <select className="Req"
             value = {setVehicles}
-            required onChange={(e) => setVehicles(e.target.value)}
+            required 
+            onChange={(e) => setVehicles(e.target.value)}
+          >
             <option value={1}>Compact</option>
             <option value={2}>SUV</option>
             <option value={3}>Van</option>
