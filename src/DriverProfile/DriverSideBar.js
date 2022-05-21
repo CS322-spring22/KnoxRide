@@ -1,12 +1,14 @@
-import { SwitchVideoSharp } from '@mui/icons-material';
 import React from 'react'
 import "./DriverSideBar.css";
 import DriverSideBarRow from "./DriverSideBarRow";
+import { Link } from "react-router-dom";
 
 function DriverSideBar() {
     return (
         <div className="sideBar">
-            <DriverSideBarRow title="Accepted Requests" />
+            <Link to = "/acceptedrequests">
+                <DriverSideBarRow title="Accepted Requests" />
+            </Link>
             <DriverSideBarRow title="Saved Requests"/>
         </div>
     );

@@ -4,7 +4,7 @@ import "./DriverSideBarRow.css";
 function DriverSideBarRow({ title }) {
     return (
         <div className="driverSideBarRow">
-            <h4>{ title }</h4>
+            <button>{ title }</button>
         </div>
     );
 }

@@ -3,9 +3,38 @@ import './DriverGeneralPost.css';
 import { Avatar } from '@material-ui/core';
 import DoneIcon from '@mui/icons-material/Done';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import { getAuth } from "firebase/auth";
+import { addDoc, collection, serverTimestamp} from "firebase/firestore";
+import { db } from "../firebaseconfig/fire2";
 
+function DriverGeneralPost({ uid, timeStamp, name, lastName, email, phoneNumber, numberOfPassengers, vehicles, pickupDate, pickupTime, pickupLocation, pickupLocation2, pickupLocation3, pickupLocation4, destination, destination2, destination3, destination4, paymentRange, notes }) {
 
-function DriverGeneralPost({ name, email, phoneNumber, numberOfPassengers, vehicles, pickupTime, pickupLocation, destination, paymentRange, notes }) {
+    const handleAccept = async(e) => {
+        e.preventDefault();
+
+        try {
+            const auth = getAuth();
+            const user = auth.currentUser;
+
+            await addDoc(collection(db, 'acceptedRequests'), {
+                uid: user.uid,
+                timeStamp: serverTimestamp(),
+                name: name,
+                email: email,
+                phoneNumber: phoneNumber,
+                numberOfPassengers: numberOfPassengers,
+                vehicles: vehicles,
+                pickupTime: pickupTime,
+                pickupLocation: pickupLocation,
+                destination: destination,
+                paymentRange: paymentRange,
+                notes: notes,
+            });
+              
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     return (
         <div className="driverGeneralPost">
@@ -13,15 +42,15 @@ function DriverGeneralPost({ name, email, phoneNumber, numberOfPassengers, vehic
             <div className="driver_genPost_top">
                 <Avatar src="" className="driver_genPost_avatar" />
                 <div className="driver_genPost_topInfo">
-                    {/* <h3>{ username }</h3>
-                    <p>{new Date(timestamp)?.toDate().toUTCString()}</p> */}
+                    <h3>{ uid }</h3>
+                    <p>{ timeStamp }</p>
                 </div>
             </div>
 
             <div className="driver_genPost_bottom">
 
                 <label>Name</label>
-                <p>{ name }</p>
+                <p>{ name } {lastName}</p>
 
                 <label>Email</label>
                 <p>{ email }</p>
@@ -35,14 +64,17 @@ function DriverGeneralPost({ name, email, phoneNumber, numberOfPassengers, vehic
                 <label>Vehicles</label>
                 <p>{ vehicles }</p>
 
+                <label>Pickup date</label>
+                <p>{ pickupDate }</p>
+
                 <label>Pickup time</label>
                 <p>{ pickupTime }</p>
 
                 <label>Pickup location</label>
-                <p>{ pickupLocation }</p>
+                <p>{ pickupLocation }, { pickupLocation2 }, { pickupLocation3 }, { pickupLocation4 }</p>
 
                 <label>Destination</label>
-                <p>{ destination }</p>
+                <p>{ destination }, { destination2 }, { destination3 }, { destination4 }</p>
 
                 <label>Payment range</label>
                 <p>{ paymentRange }</p>
@@ -55,9 +87,9 @@ function DriverGeneralPost({ name, email, phoneNumber, numberOfPassengers, vehic
             <div className="driver_genPost_options">
 
                 <div className="driver_genPost_option">
-                    <div className="driver_genPost_option" >
+                    <div className="driver_genPost_option">
                         <DoneIcon />
-                        <p>Accept</p>
+                        <p onClick={handleAccept} >Accept</p>
                     </div>
                 </div>
     
