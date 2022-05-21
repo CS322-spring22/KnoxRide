@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import "./AcceptedRq.css";
-import DriverGeneralPost from "../DriverNewsFeed/DriverGeneralPost";
+import AcceptedForm from "./AcceptedForm";
 import { db } from "../firebaseconfig/fire2";
 
 function AcceptedRq() {
@@ -25,15 +25,20 @@ function AcceptedRq() {
                 {acceptedRequests.map((acceptedRequests) => {
                 return (
                     <div>
-                        <DriverGeneralPost
+                        <AcceptedForm
                             name={acceptedRequests.name}
+                            lastName={acceptedRequests.lastName}
                             email={acceptedRequests.email}
                             phoneNumber={acceptedRequests.phoneNumber}
                             numberOfPassengers={acceptedRequests.numberOfPassengers}
                             vehicles={acceptedRequests.vehicles}
                             pickupTime={acceptedRequests.pickupTime}
                             pickupLocation={acceptedRequests.pickupLocation}
+                            pickupLocation2={acceptedRequests.pickupLocation2}
+                            pickupLocatio3={acceptedRequests.pickupLocatio3}
                             destination={acceptedRequests.destination}
+                            destination2={acceptedRequests.destination2}
+                            destination2={acceptedRequests.destination3}
                             paymentRange={acceptedRequests.paymentRange}
                             notes={acceptedRequests.notes}
                         />
