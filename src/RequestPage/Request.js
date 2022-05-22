@@ -19,17 +19,15 @@ function Request() {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [numberOfPassengers, setNumberOfPassengers] = useState("");
-  const [vehicles, setVehicles] = useState("");
   const [pickupTime, setPickupTime] = useState("");
   const [pickupDate, setPickUpDate] = useState("");
   const [pickupLocation, setPickupLocation] = useState("");
   const [pickupLocation2, setPickupLocation2] = useState(""); // address pt 2
   const [pickupLocation3, setPickupLocation3] = useState(""); // city
-  const [pickupLocation4, setPickupLocation4] = useState("USA"); // country
+
   const [destination, setDestination] = useState("");
   const [destination2, setDestination2] = useState(""); // address pt 2
   const [destination3, setDestination3] = useState(""); //city
-  const [destination4, setDestination4] = useState("USA"); // country
   const [paymentRange, setPaymentRange] = useState("");
   const [notes, setNotes] = useState("");
 
@@ -51,7 +49,6 @@ function Request() {
         email: email,
         phoneNumber: phoneNumber,
         numberOfPassengers: numberOfPassengers,
-        vehicles: vehicles,
 
         pickupTime: pickupTime,
         pickupDate: pickupDate,
@@ -59,12 +56,10 @@ function Request() {
         pickupLocation: pickupLocation,
         pickupLocation2: pickupLocation2,
         pickupLocation3: pickupLocation3,
-        pickupLocation4: pickupLocation4,
 
         destination: destination,
         destination2: destination2,
         destination3: destination3,
-        destination4: destination4,
         paymentRange: paymentRange,
         notes: notes,
       })
@@ -82,17 +77,15 @@ function Request() {
     setEmail("");
     setPhoneNumber("");
     setNumberOfPassengers("");
-    setVehicles("");
+
     setPickupTime("");
     setPickUpDate("");
     setPickupLocation("");
     setPickupLocation2("");
     setPickupLocation3("");
-    setPickupLocation4("");
     setDestination("");
     setDestination2("");
     setDestination3("");
-    setDestination4("");
     setPaymentRange("");
     setNotes("");
   };
@@ -201,19 +194,6 @@ function Request() {
           />
         </div>
         <div className="itemReq">
-          <p className="Req">Vehicle Type *</p>
-          <select className="Req"
-            value = {setVehicles}
-            required 
-            onChange={(e) => setVehicles(e.target.value)}
-          >
-            <option value={1}>Compact</option>
-            <option value={2}>SUV</option>
-            <option value={3}>Van</option>
-            <option value={4}>Pickup</option>
-          </select>
-        </div>
-        <div className="itemReq">
           <p className="Req"> Pick Up Date *</p>
           <input
             className="Req"
@@ -263,20 +243,6 @@ function Request() {
               placeholder="City *"
               onChange={(e) => setPickupLocation3(e.target.value)}
             />
-
-            <select
-              className="Req"
-              placeholder="COUNTRY"
-              value={pickupLocation4}
-              required
-              onChange={(e) => setPickupLocation4(e.target.value)}
-            >
-              <option value>USA</option>
-              <option value={1}>Russia</option>
-              <option value={2}>Germany</option>
-              <option value={3}>France</option>
-              <option value={4}>Armenia</option>
-            </select>
           </div>
         </div>
         <div className="itemReq">
@@ -305,17 +271,6 @@ function Request() {
               placeholder="City *"
               onChange={(e) => setDestination3(e.target.value)}
             />
-
-            <select className="Req">
-              \ required value = {destination4}
-              onChange={(e) => setDestination4(e.target.value)}
-              <option value>Country</option>
-              <option value={1}>Russia</option>
-              <option value={2}>Germany</option>
-              <option value={3}>France</option>
-              <option value={4}>Armenia</option>
-              <option value={5}>USA</option>
-            </select>
           </div>
         </div>
         <div className="itemReq">
