@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { db } from "../firebaseconfig/fire2";
 import DriverProfileForm from "./DriverProfileForm";
-
+import "./DriverProfilePage.css";
 import DriverSideBar from "./DriverSideBar";
 
 function DriverProfilePage() {
