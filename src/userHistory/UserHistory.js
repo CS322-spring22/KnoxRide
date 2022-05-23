@@ -1,14 +1,3 @@
-import "./Userhistory.css";
-import React from "react";
-import logo from "../UserHomePage/logopic.png";
-
-function UserHistory() {
-  return (
-  );
-}
-export default UserHistory;
-
-/*
 import { getAuth } from "firebase/auth";
 import React, { useState } from "react";
 import { db } from "../firebaseconfig/fire2";
@@ -33,14 +22,15 @@ import {
   limit,
 } from "firebase/firestore";
 
-//const hInput = [];
+const hInput = [];
 
 function UserHistory() {
   const history = useNavigate();
 
   const handleLogout = () => {
-    auth.signOut().then(() => history("/login"));
+    auth.signOut().then(() => history("/"));
   };
+
   const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
   const [input3, setInput3] = useState("");
@@ -73,46 +63,53 @@ function UserHistory() {
     setInput3(hInput[hInput.length - 3]);
     setInput4(hInput[hInput.length - 4]);
   };
- 
+
   return (
-    <header className="headerUser">
-      <nav className="navbarUserContact">
-        <nav className="logopic">
-          <a href="/homepage">
-            <img className="userContactLogo" src={logo} alt="logo" />
-          </a>
+    <div>
+      <header className="headerUser">
+        <nav className="navbarUserContact">
+          <nav className="logopic">
+            <a href="/homepage">
+              <img className="userContactLogo" src={logo} alt="logo" />
+            </a>
+          </nav>
+          <ul className="nav-menu-contact">
+            <li className="nav-item-contact">
+              <a href="/request" className="nav-link-contact">
+                Make a Request
+              </a>
+            </li>
+            <li className="nav-item-contact">
+              <a href="#" className="nav-link-contact">
+                History
+              </a>
+            </li>
+            <li className="nav-item-contact">
+              <a href="/driverfeed" className="nav-link-contact">
+                Become a Driver
+              </a>
+            </li>
+            <li className="nav-item-contact">
+              <a href="/contact" className="nav-link-contact">
+                Contact Us
+              </a>
+            </li>
+            <li className="nav-item-contact">
+              <button className="button-nav-link" onClick={handleLogout}>
+                Sign Out
+              </button>
+            </li>
+          </ul>
         </nav>
-        <ul className="nav-menu-contact">
-          <li className="nav-item-contact">
-            <a href="/request" className="nav-link-contact">
-              Make a Request
-            </a>
-          </li>
-          <li className="nav-item-contact">
-            <a href="#" className="nav-link-contact">
-              History
-            </a>
-          </li>
-          <li className="nav-item-contact">
-            <a href="/driverfeed" className="nav-link-contact">
-              Become a Driver
-            </a>
-          </li>
-          <li className="nav-item-contact">
-            <a href="/contact" className="nav-link-contact">
-              Contact Us
-            </a>
-          </li>
-          <li className="nav-item-contact">
-            <button className="button-nav-link" onClick={handleLogout}>
-              Sign Out
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
+      </header>
+
+      <p>{input1}</p>
+      <p>{input2}</p>
+      <p>{input3}</p>
+      <p>{input4}</p>
+      <p>HELLLLLLLLOOOOS</p>
+    </div>
   );
 }
 
 export default UserHistory;
-*/

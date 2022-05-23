@@ -105,7 +105,7 @@ function Request() {
               </a>
             </li>
             <li className="nav-item-contact">
-              <a href="#" className="nav-link-contact">
+              <a href="/userhistory" className="nav-link-contact">
                 History
               </a>
             </li>
