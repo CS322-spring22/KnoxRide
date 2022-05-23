@@ -274,13 +274,11 @@ function Request() {
           </div>
         </div>
         <div className="itemReq">
-          <p className="Req">Payment Range</p>
+          <p className="Req">Payment Offer</p>
 
           <input
             className="Req"
-            type="number"
             required
-            min="1"
             placeholder="$ *"
             value={paymentRange}
             onChange={(e) => setPaymentRange(e.target.value)}
