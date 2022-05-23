@@ -274,6 +274,19 @@ function Request() {
           </div>
         </div>
         <div className="itemReq">
+          <p className="Req">Payment Range</p>
+
+          <input
+            className="Req"
+            type="number"
+            required
+            min="1"
+            placeholder="$ *"
+            value={paymentRange}
+            onChange={(e) => setPaymentRange(e.target.value)}
+          />
+        </div>
+        <div className="itemReq">
           <p className="Req"> Notes</p>
           <textarea
             className="Req"

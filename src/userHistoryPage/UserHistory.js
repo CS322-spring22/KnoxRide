@@ -23,6 +23,7 @@ import {
 } from "firebase/firestore";
 
 const hInput = [];
+const myQ = "test1 un changed";
 
 function UserHistory() {
   const history = useNavigate();
@@ -30,7 +31,6 @@ function UserHistory() {
   const handleLogout = () => {
     auth.signOut().then(() => history("/"));
   };
-
   const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
   const [input3, setInput3] = useState("");
@@ -38,13 +38,18 @@ function UserHistory() {
 
   const [user] = useAuthState(auth);
 
-  const userID = user.uid;
+  let reqHist = () => {
+    console.log("hello test ");
 
-  let showHist = async (e) => {
-    console.log("ShowHist pressed");
+    const userID = user.uid;
+    const userRequestRef = db.collection("userRequest");
+    const q = userRequestRef.where("uid", " ==", userID).get();
+    console.log(q);
+    console.log("HELLO  ITS ME 4444");
 
-    const q = query(collection(db, "users"), where("uid", "==", userID));
-    const querySnapshot = await getDocs(q);
+    const querySnapshot = getDocs(q);
+    console.log(q);
+
     querySnapshot.forEach((doc) => {
       if (!doc.data().history) {
         console.log("no history yet");
@@ -102,12 +107,10 @@ function UserHistory() {
           </ul>
         </nav>
       </header>
-
-      <p>{input1}</p>
-      <p>{input2}</p>
-      <p>{input3}</p>
-      <p>{input4}</p>
-      <p>HELLLLLLLLOOOOS</p>
+      <p>
+        haushdaushd {hInput} XDXDXD {myQ} XDXDXDHELLP
+      </p>
+      <button className="history-button-left" onClick={reqHist}></button>
     </div>
   );
 }

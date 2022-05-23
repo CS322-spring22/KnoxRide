@@ -10,7 +10,7 @@ import DriverProfilePage from "./DriverProfile/DriverProfilePage";
 import AcceptedRq from "./AcceptedRq/AcceptedRq";
 import APLOG from "./APLOG";
 import RegisF from "./Logincomponents/RegisF";
-import UserHistory from "./userHistory/UserHistory.js";
+import UserHistory from "./userHistoryPage/UserHistory.js";
 
 function RoutesController() {
   return (
