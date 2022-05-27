@@ -21,6 +21,10 @@ import {
   orderBy,
   limit,
 } from "firebase/firestore";
+var i = 0;
+var x = "";
+var xx = "";
+const stringInput = [];
 
 const hInput = [];
 const myQ = "test1 un changed";
@@ -38,36 +42,36 @@ function UserHistory() {
 
   const [user] = useAuthState(auth);
 
-  let reqHist = () => {
+  let reqHist = async (e) => {
     console.log("hello test ");
 
     const userID = user.uid;
+
     const userRequestRef = db.collection("userRequest");
-    const q = userRequestRef.where("uid", " ==", userID).get();
-    console.log(q);
-    console.log("HELLO  ITS ME 4444");
+    const q = await userRequestRef.where("uid", "==", userID).get();
+    //const q = userRequestRef.where("uid", " ==", userID).get();
 
-    const querySnapshot = getDocs(q);
-    console.log(q);
+    q.forEach((doc) => {
+      console.log(doc.id, "=>", doc.data());
+      hInput[i] = (doc.id, "=>", doc.data());
+      stringInput[i] = JSON.stringify(hInput[i]);
 
-    querySnapshot.forEach((doc) => {
-      if (!doc.data().history) {
-        console.log("no history yet");
-      } else {
-        doc.data().history.forEach((s) => {
-          console.log(s); //get all of history
-          //input and output are a single string split by :
-          var arr = s.split(":");
-          //put those split things into their own arrays
-          hInput.push(arr[0]);
-        });
-      }
+      // x = JSON.stringify(doc.id, "=>", doc.data());
+      i++;
+
+      // console.log(doc.id, "=>", doc.data());
     });
     setInput1(hInput[hInput.length - 1]);
     setInput2(hInput[hInput.length - 2]);
     setInput3(hInput[hInput.length - 3]);
     setInput4(hInput[hInput.length - 4]);
   };
+
+  let bla = hInput[0];
+
+  for (let i = 0; i < stringInput.length; i++) {
+    stringInput[i] = stringInput[i].replace(",", "\n");
+  }
 
   return (
     <div>
@@ -85,7 +89,7 @@ function UserHistory() {
               </a>
             </li>
             <li className="nav-item-contact">
-              <a href="#" className="nav-link-contact">
+              <a href="/userhistory" className="nav-link-contact">
                 History
               </a>
             </li>
@@ -107,10 +111,15 @@ function UserHistory() {
           </ul>
         </nav>
       </header>
-      <p>
-        haushdaushd {hInput} XDXDXD {myQ} XDXDXDHELLP
-      </p>
       <button className="history-button-left" onClick={reqHist}></button>
+      <p>
+        {bla}
+        {stringInput[0]}
+      </p>
+      <div></div>
+      <p>{stringInput[1]}</p>
+      <p>{stringInput[2]} </p>
+      <p> {x}</p>
     </div>
   );
 }
