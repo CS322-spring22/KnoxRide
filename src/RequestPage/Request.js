@@ -274,13 +274,6 @@ function Request() {
           </div>
         </div>
         <div className="itemReq">
-<<<<<<< HEAD
-          <p className="Req">Payment Offer</p>
-
-          <input
-            className="Req"
-            required
-=======
           <p className="Req">Payment Range</p>
 
           <input
@@ -288,16 +281,11 @@ function Request() {
             type="number"
             required
             min="1"
->>>>>>> userHistorypage
             placeholder="$ *"
             value={paymentRange}
             onChange={(e) => setPaymentRange(e.target.value)}
           />
         </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> userHistorypage
         <div className="itemReq">
           <p className="Req"> Notes</p>
           <textarea
