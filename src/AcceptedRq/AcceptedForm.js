@@ -3,13 +3,13 @@ import '../DriverNewsFeed/DriverGeneralPost.css';
 import { Avatar } from '@material-ui/core';
 
 
-function AcceptedForm({ uid, timeStamp, name, lastName, email, phoneNumber, numberOfPassengers, pickupDate, pickupTime, pickupLocation, pickupLocation2, pickupLocation3, destination, destination2, destination3, paymentRange, notes }) {
+function AcceptedForm({ timeStamp, name, lastName, email, phoneNumber, numberOfPassengers, pickupDate, pickupTime, pickupLocation, pickupLocation2, pickupLocation3, destination, destination2, destination3, paymentRange, notes }) {
     return (
         <div className="driverGeneralPost">
             <div className="driver_genPost_top">
                <Avatar src="" className="driver_genPost_avatar" />
                <div className="driver_genPost_topInfo">
-                   <h3>{ uid }</h3>
+                   <h3>{ name } { lastName }</h3>
                    <p>{ timeStamp }</p>
                </div>
            </div>
@@ -33,6 +33,7 @@ function AcceptedForm({ uid, timeStamp, name, lastName, email, phoneNumber, numb
 
                <label>Pickup time</label>
                <p>{ pickupTime }</p>
+
                <label>Pickup location</label>
                <p>{ pickupLocation }, { pickupLocation2 }, { pickupLocation3 }</p>
 

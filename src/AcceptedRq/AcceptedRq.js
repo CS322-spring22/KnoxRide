@@ -2,25 +2,34 @@ import React, { useState, useEffect } from 'react'
 import "./AcceptedRq.css";
 import AcceptedForm from "./AcceptedForm";
 import { db } from "../firebaseconfig/fire2";
+import { getAuth } from "firebase/auth";
 
 function AcceptedRq() {
+    const auth = getAuth();
+    const user = auth.currentUser;
     const [acceptedRequests, setAcceptedRequests] = useState([]);
     useEffect(() => {
-        
-    db.collection('acceptedRequests')
-        .orderBy("timeStamp", "desc")
-        .get()
-        .then((res) => {
-            const rq = [];
-            res.forEach((snapshot) => rq.push(snapshot.data()));
-            console.log(rq);
-            setAcceptedRequests([...rq])   
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                db.collection('acceptedRequests' + user.uid)
+                    .orderBy("timeStamp", "desc")
+                    .get()
+                    .then((res) => {
+                        const rq = [];
+                        res.forEach((snapshot) => rq.push(snapshot.data()));
+                        console.log(rq);
+                        setAcceptedRequests([...rq])   
+                    })
+            } else {
+                console.log('user is not logged in');
+            }
         })
-        
+
     }, []);
 
     return (
         <div className="driver_feed">
+            <h2>Your Ride(s)</h2>
             <div className="driver_feed_body">
                 {acceptedRequests.map((acceptedRequests) => {
                 return (

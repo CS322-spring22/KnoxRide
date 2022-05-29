@@ -1,5 +1,4 @@
-import React from 'react'
-import "./DriverSideBar.css";
+import React from 'react';
 import DriverSideBarRow from "./DriverSideBarRow";
 import { Link } from "react-router-dom";
 
@@ -9,7 +8,9 @@ function DriverSideBar() {
             <Link to = "/acceptedrequests">
                 <DriverSideBarRow title="Accepted Requests" />
             </Link>
-            <DriverSideBarRow title="Saved Requests"/>
+            {/* <Link to = "/savedrequests">
+                <DriverSideBarRow title="Saved Requests"/>
+            </Link> */}
         </div>
     );
 }

@@ -2,13 +2,13 @@ import React from 'react';
 import './DriverGeneralPost.css';
 import { Avatar } from '@material-ui/core';
 import DoneIcon from '@mui/icons-material/Done';
-import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+// import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import { getAuth } from "firebase/auth";
 import { addDoc, collection, serverTimestamp} from "firebase/firestore";
 import { db } from "../firebaseconfig/fire2";
 
 function DriverGeneralPost({ uid, timeStamp, name, lastName, email, phoneNumber, numberOfPassengers, pickupDate, pickupTime, pickupLocation, pickupLocation2, pickupLocation3, destination, destination2, destination3, paymentRange, notes }) {
-
+    const accepted = false;
     const handleAccept = async(e) => {
         e.preventDefault();
 
@@ -16,7 +16,7 @@ function DriverGeneralPost({ uid, timeStamp, name, lastName, email, phoneNumber,
             const auth = getAuth();
             const user = auth.currentUser;
 
-            const docRef = await addDoc(collection(db, 'acceptedRequests'), {
+            const docRef = await addDoc(collection(db, 'acceptedRequests' + user.uid), {
                 uid: user.uid,
                 timeStamp: serverTimestamp(),
                 name: name,
@@ -36,14 +36,14 @@ function DriverGeneralPost({ uid, timeStamp, name, lastName, email, phoneNumber,
         }
     }
 
+
     return (
         <div className="driverGeneralPost">
 
             <div className="driver_genPost_top">
                 <Avatar src="" className="driver_genPost_avatar" />
                 <div className="driver_genPost_topInfo">
-                    <h3>{ uid }</h3>
-                    <p>{ timeStamp }</p>
+                    <h3>{ name } { lastName }</h3>
                 </div>
             </div>
 
@@ -90,10 +90,6 @@ function DriverGeneralPost({ uid, timeStamp, name, lastName, email, phoneNumber,
                     </div>
                 </div>
     
-                <div className="driver_genPost_option">
-                    <BookmarkBorderIcon />
-                    <p>Save</p>
-                </div>
             </div>
         </div>
     );
