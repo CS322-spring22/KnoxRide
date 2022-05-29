@@ -105,7 +105,7 @@ function Request() {
               </a>
             </li>
             <li className="nav-item-contact">
-              <a href="#" className="nav-link-contact">
+              <a href="/userhistory" className="nav-link-contact">
                 History
               </a>
             </li>
@@ -274,17 +274,30 @@ function Request() {
           </div>
         </div>
         <div className="itemReq">
+<<<<<<< HEAD
           <p className="Req">Payment Offer</p>
 
           <input
             className="Req"
             required
+=======
+          <p className="Req">Payment Range</p>
+
+          <input
+            className="Req"
+            type="number"
+            required
+            min="1"
+>>>>>>> userHistorypage
             placeholder="$ *"
             value={paymentRange}
             onChange={(e) => setPaymentRange(e.target.value)}
           />
         </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> userHistorypage
         <div className="itemReq">
           <p className="Req"> Notes</p>
           <textarea

@@ -26,7 +26,7 @@ function HomePage() {
               </a>
             </li>
             <li className="nav-item-home">
-              <a href="#" className="nav-link-home">
+              <a href="/userhistory" className="nav-link-home">
                 History
               </a>
             </li>
