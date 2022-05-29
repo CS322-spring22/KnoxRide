@@ -100,32 +100,32 @@ const Applog = () => {
 
   return (
     <div className="Applog">
-      {user ? (
+      {/*{user ? (
         <Hero handleLogout={handleLogout} />
-      ) : (
-        <LoginForm
-          email={email}
-          setEmail={setEmail}
-          password={password}
-          setPassword={setPassword}
-          handleLogin={handleLogin}
-          //handleSignup={handleSignup}
-          hasAccount={hasAccount}
-          setHasAccount={setHasAccount}
-          emailError={emailError}
-          passwordError={passwordError}
+      ) : (*/}
+      <LoginForm
+        email={email}
+        setEmail={setEmail}
+        password={password}
+        setPassword={setPassword}
+        handleLogin={handleLogin}
+        //handleSignup={handleSignup}
+        hasAccount={hasAccount}
+        setHasAccount={setHasAccount}
+        emailError={emailError}
+        passwordError={passwordError}
 
-          //fname={fname}
-          //setFname={setFname}
-          //lname={lname}
-          //setLname={setLname}
-          //phonenumber={phonenumber}
-          //setPhonenumber={setPhonenumber}
-          //license={license}
-          //setLicense={setLicense}
-          //phoneError={phoneError}
-        />
-      )}
+      //fname={fname}
+      //setFname={setFname}
+      //lname={lname}
+      //setLname={setLname}
+      //phonenumber={phonenumber}
+      //setPhonenumber={setPhonenumber}
+      //license={license}
+      //setLicense={setLicense}
+      //phoneError={phoneError}
+      />
+      {/*)}*/}
     </div>
   );
 };

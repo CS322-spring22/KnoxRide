@@ -7,7 +7,7 @@ import Applog from "./Applog";
 import Request from "./RequestPage/Request.js";
 import Contact from "./ContactUs/Contact.js";
 import UserRequest from "./UserRequestPage/UserRequest";
-
+import Hero from "./Hero.js";
 //import DriverFeed from "./DriverNewsFeed/DriverFeed";
 //import DriverSchedulePage from "./DriverSchedule/DriverSchedulePage";
 import APLOG from "./APLOG";
@@ -25,6 +25,7 @@ function RoutesController() {
       <Route exact path="/request" element={<Request />} />
       <Route exact path="/userrequest" element={<UserRequest />} />
       <Route exact path="/contact" element={<Contact />} />
+      <Route exact path="/term" element={<Hero />} />
     </Routes>
   );
 }
