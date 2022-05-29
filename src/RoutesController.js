@@ -8,6 +8,9 @@ import Contact from "./ContactUs/Contact.js";
 import UserRequest from "./UserRequestPage/UserRequest";
 import DriverProfilePage from "./DriverProfile/DriverProfilePage";
 import AcceptedRq from "./AcceptedRq/AcceptedRq";
+import Hero from "./Hero.js";
+//import DriverFeed from "./DriverNewsFeed/DriverFeed";
+//import DriverSchedulePage from "./DriverSchedule/DriverSchedulePage";
 import APLOG from "./APLOG";
 import RegisF from "./Logincomponents/RegisF";
 import UserHistory from "./userHistoryPage/UserHistory.js";
@@ -25,6 +28,7 @@ function RoutesController() {
       <Route exact path="/userrequest" element={<UserRequest />} />
       <Route exact path="/contact" element={<Contact />} />
       <Route exact path="/userhistory" element={<UserHistory />} />
+      <Route exact path="/term" element={<Hero />} />
     </Routes>
   );
 }

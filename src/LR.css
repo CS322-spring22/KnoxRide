@@ -6,7 +6,7 @@
 
 }
 
-button {
+button.lbtn {
   border: none;
   outline: none;
   width: 100%;
@@ -14,7 +14,26 @@ button {
   color: #fff;
   font-size: 16px;
   letter-spacing: 1px;
-  background: #603bbb;
+  background: radial-gradient(ellipse at left bottom,
+      rgb(74, 7, 132) 0%,
+      rgb(121, 15, 234) 66%,
+      rgba(36, 14, 123, 0.912) 100%);
+  cursor: pointer;
+}
+
+
+button.registerbtn {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 15px 0;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: radial-gradient(ellipse at left bottom,
+      rgb(74, 7, 132) 0%,
+      rgb(121, 15, 234) 66%,
+      rgba(36, 14, 123, 0.912) 100%);
   cursor: pointer;
 }
 

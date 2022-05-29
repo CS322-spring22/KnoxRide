@@ -16,11 +16,15 @@ const RegisF = () => {
 
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
+  const [stuID, setStuID] = useState("");
   const [phonenumber, setPhonenumber] = useState("");
   const [license, setLicense] = useState("");
   const [car, setCar] = useState("");
   const [phoneError, setPhoneError] = useState("");
   const [loader, setLoader] = useState("");
+  const [agree, setAgree] = useState(false);
+
+
 
   const clearInputs = () => {
     setEmail("");
@@ -31,6 +35,8 @@ const RegisF = () => {
     setPhonenumber("");
     setLicense("");
     setCar("");
+    setStuID("");
+    setAgree(false);
   };
 
   const clearErrors = () => {
@@ -67,6 +73,8 @@ const RegisF = () => {
         phonenumber: phonenumber,
         license: license,
         car: car,
+        stuID: stuID,
+        agree: agree,
       })
       .then(() => {
         alert("You have been registered");
@@ -109,6 +117,7 @@ const RegisF = () => {
         />
         <p className="errorMsg">{emailError}</p>
 
+
         <label>Password</label>
         <input
           type="password"
@@ -118,6 +127,7 @@ const RegisF = () => {
         />
         <p className="errorMsg">{passwordError}</p>
 
+
         <label>First Name</label>
         <input
           type="text"
@@ -125,6 +135,7 @@ const RegisF = () => {
           value={fname}
           onChange={(e) => setFname(e.target.value)}
         />
+
 
         <label>Last Name</label>
         <input
@@ -134,16 +145,58 @@ const RegisF = () => {
           onChange={(e) => setLname(e.target.value)}
         />
 
+
+        <label>Student ID Number</label>
+        <input
+          type="tel"
+          required
+          minlength="7"
+          maxlength="7"
+          value={stuID}
+          onChange={(e) => setStuID(e.target.value)}
+        />
+
+        <label>Terms of Service and Agreement</label>
+        <p className="addinfo" for="terms"> I have read and agree with the terms and conditions</p>
+        <Link to="../term">
+          <button className="termbtn">Terms and Conditions</button>
+          {/*<p>Have An Account? <span onClick={() => setHasAccount(!hasAccount)}>Sign In</span></p>*/}
+        </Link>
+        <input
+          type="checkbox"
+          id="terms"
+          name="terms"
+          required
+          value={agree}
+          onChange={(e) => setAgree(true)}
+        />
+
+
+        <br>
+
+        </br>
+
+
+
+        <p className="addinfo">Additional Information Incase of Driver Registration</p>
+
+
+
+
+
         <label>Phone Number</label>
         <input
-          type="number"
+          type="tel"
           required
           minlength="10"
           maxlength="10"
           value={phonenumber}
           onChange={(e) => setPhonenumber(e.target.value)}
         />
+
         <p className="errorMsg">{phoneError}</p>
+
+
 
         <label>Car License</label>
         <input
@@ -155,6 +208,8 @@ const RegisF = () => {
           onChange={(e) => setLicense(e.target.value)}
         />
 
+
+
         <label>Car</label>
         <input
           type="text"
@@ -164,18 +219,27 @@ const RegisF = () => {
         />
         <br></br>
 
+
+
+
+
+
+
         <div className="btnContainer">
           {/*{hasAccount ? (*/}
           <>
-            <button onClick={handleSignup}>Register</button>
-            <br></br>
+            <button className="regisbtn" onClick={handleSignup}>Register</button>
+            <br>
+
+
+            </br>
           </>
           <br></br>
           {/*}) : (*/}
           <div className="btnSignUp"></div>
           <>
-            <Link to="../">
-              <button>Login</button>
+            <Link to="../login">
+              <button className="loginbtn">Login</button>
               {/*<p>Have An Account? <span onClick={() => setHasAccount(!hasAccount)}>Sign In</span></p>*/}
             </Link>
           </>
