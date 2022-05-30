@@ -1,10 +1,10 @@
 import React from 'react';
-import './DriverProfileForm.css';
+import '../DriverNewsFeed/DriverGeneralPost.css';
 
 function DriverGeneralPost({ fname, lname, phonenumber, car, license }) {
 
     return (
-        <div className="driverProfileForm">
+        <div className="driverGeneralPost">
 
             <div className="driver_genPost_bottom">
 
@@ -29,3 +29,5 @@ function DriverGeneralPost({ fname, lname, phonenumber, car, license }) {
 }
 
 export default DriverGeneralPost
+
+

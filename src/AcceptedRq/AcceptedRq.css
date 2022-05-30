@@ -4,6 +4,10 @@
     margin: auto;
   }
   
-  .accepted_body {
-    justify-content: space-evenly;
-  }
+.accepted_body {
+  justify-content: space-evenly;
+}
+
+.driver_feed > h2 {
+  width: 50%;
+}

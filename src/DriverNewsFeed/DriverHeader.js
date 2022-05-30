@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./DriverHeader.css";
 import SearchIcon from '@mui/icons-material/Search';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
-import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
 import PersonIcon from '@mui/icons-material/Person';
 import { Avatar, IconButton } from '@material-ui/core';
@@ -30,23 +29,20 @@ function DriverHeader() {
                             <Avatar src="" fontSize="large"/>
                         </IconButton>
                     </Link>
-                    <h3>CS 322</h3>
+                    
                 </div>
             </div>
 
 
 
             <div className="driver_header_center">
-                <div className="driver_searchBar">
-                    <SearchIcon />
-                    <input type="text"></input>
-                </div>
+                <h1>KNOX RIDE</h1>
             </div> 
 
 
 
             <div className="driver_header_right">
-                <Link to = "/driverprofile">
+                <Link to = "/acceptedrequests">
                     <IconButton >
                         <AssignmentIndIcon fontSize="large" className="driver_header_right_option"/>
                     </IconButton>
@@ -57,16 +53,6 @@ function DriverHeader() {
                         <PersonIcon fontSize="large" className="driver_header_right_option"/>
                     </IconButton>
                 </Link>
-
-                <Link to ="#">
-                    <IconButton >
-                        <SettingsIcon fontSize="large" className="driver_header_right_option"/>
-                    </IconButton>
-                </Link>
-
-                {/* <IconButton >
-                    <LogoutIcon fontSize="large" className="driver_header_right_option" onClick={handleLogout}/>
-                </IconButton> */}
 
                 <button className="headerLogout_btn" onClick={handleLogout}>
                     <LogoutIcon fontSize="large" className="driver_header_right_option" />

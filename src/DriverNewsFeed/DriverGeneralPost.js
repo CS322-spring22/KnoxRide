@@ -2,12 +2,12 @@ import React from 'react';
 import './DriverGeneralPost.css';
 import { Avatar } from '@material-ui/core';
 import DoneIcon from '@mui/icons-material/Done';
-import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+// import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import { getAuth } from "firebase/auth";
 import { addDoc, collection, serverTimestamp} from "firebase/firestore";
 import { db } from "../firebaseconfig/fire2";
 
-function DriverGeneralPost({ uid, timeStamp, name, lastName, email, phoneNumber, numberOfPassengers, vehicles, pickupDate, pickupTime, pickupLocation, pickupLocation2, pickupLocation3, pickupLocation4, destination, destination2, destination3, destination4, paymentRange, notes }) {
+function DriverGeneralPost({ uid, timeStamp, name, lastName, email, phoneNumber, numberOfPassengers, pickupDate, pickupTime, pickupLocation, pickupLocation2, pickupLocation3, destination, destination2, destination3, paymentRange, notes }) {
 
     const handleAccept = async(e) => {
         e.preventDefault();
@@ -16,25 +16,26 @@ function DriverGeneralPost({ uid, timeStamp, name, lastName, email, phoneNumber,
             const auth = getAuth();
             const user = auth.currentUser;
 
-            await addDoc(collection(db, 'acceptedRequests'), {
+            const docRef = await addDoc(collection(db, 'acceptedRequests' + user.uid), {
                 uid: user.uid,
                 timeStamp: serverTimestamp(),
                 name: name,
                 email: email,
                 phoneNumber: phoneNumber,
                 numberOfPassengers: numberOfPassengers,
-                vehicles: vehicles,
                 pickupTime: pickupTime,
                 pickupLocation: pickupLocation,
                 destination: destination,
                 paymentRange: paymentRange,
                 notes: notes,
             });
+            console.log(docRef);
               
         } catch (error) {
             console.log(error);
         }
     }
+
 
     return (
         <div className="driverGeneralPost">
@@ -42,8 +43,7 @@ function DriverGeneralPost({ uid, timeStamp, name, lastName, email, phoneNumber,
             <div className="driver_genPost_top">
                 <Avatar src="" className="driver_genPost_avatar" />
                 <div className="driver_genPost_topInfo">
-                    <h3>{ uid }</h3>
-                    <p>{ timeStamp }</p>
+                    <h3>{ name } { lastName }</h3>
                 </div>
             </div>
 
@@ -61,9 +61,6 @@ function DriverGeneralPost({ uid, timeStamp, name, lastName, email, phoneNumber,
                 <label>Number of passengers</label>
                 <p>{ numberOfPassengers }</p>
 
-                <label>Vehicles</label>
-                <p>{ vehicles }</p>
-
                 <label>Pickup date</label>
                 <p>{ pickupDate }</p>
 
@@ -71,10 +68,10 @@ function DriverGeneralPost({ uid, timeStamp, name, lastName, email, phoneNumber,
                 <p>{ pickupTime }</p>
 
                 <label>Pickup location</label>
-                <p>{ pickupLocation }, { pickupLocation2 }, { pickupLocation3 }, { pickupLocation4 }</p>
+                <p>{ pickupLocation }, { pickupLocation2 }, { pickupLocation3 }</p>
 
                 <label>Destination</label>
-                <p>{ destination }, { destination2 }, { destination3 }, { destination4 }</p>
+                <p>{ destination }, { destination2 }, { destination3 }</p>
 
                 <label>Payment range</label>
                 <p>{ paymentRange }</p>
@@ -89,14 +86,10 @@ function DriverGeneralPost({ uid, timeStamp, name, lastName, email, phoneNumber,
                 <div className="driver_genPost_option">
                     <div className="driver_genPost_option">
                         <DoneIcon />
-                        <p onClick={handleAccept} >Accept</p>
+                        <p onClick={handleAccept}>Accept</p>
                     </div>
                 </div>
     
-                <div className="driver_genPost_option">
-                    <BookmarkBorderIcon />
-                    <p>Save</p>
-                </div>
             </div>
         </div>
     );
