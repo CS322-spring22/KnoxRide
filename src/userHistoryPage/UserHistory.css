@@ -73,3 +73,26 @@ h1.histHeader {
   text-align: center;
   
 }
+button.histBut{
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 15px 0;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: #603bbb;
+  cursor: pointer;
+  text-align: center;
+  align-self: stretch;
+  background-color: #05336e;
+
+  
+  
+}
+.histList{
+  color: black;
+  font-size: large;
+  
+  background-color: #ffdaf0;
+}
