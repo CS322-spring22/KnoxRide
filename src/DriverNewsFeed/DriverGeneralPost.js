@@ -8,7 +8,7 @@ import { addDoc, collection, serverTimestamp} from "firebase/firestore";
 import { db } from "../firebaseconfig/fire2";
 
 function DriverGeneralPost({ uid, timeStamp, name, lastName, email, phoneNumber, numberOfPassengers, pickupDate, pickupTime, pickupLocation, pickupLocation2, pickupLocation3, destination, destination2, destination3, paymentRange, notes }) {
-    const accepted = false;
+
     const handleAccept = async(e) => {
         e.preventDefault();
 
@@ -86,7 +86,7 @@ function DriverGeneralPost({ uid, timeStamp, name, lastName, email, phoneNumber,
                 <div className="driver_genPost_option">
                     <div className="driver_genPost_option">
                         <DoneIcon />
-                        <p onClick={handleAccept} >Accept</p>
+                        <p onClick={handleAccept}>Accept</p>
                     </div>
                 </div>
     
