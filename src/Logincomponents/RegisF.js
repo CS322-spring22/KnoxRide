@@ -238,7 +238,7 @@ const RegisF = () => {
           {/*}) : (*/}
           <div className="btnSignUp"></div>
           <>
-            <Link to="../login">
+            <Link to="../">
               <button className="loginbtn">Login</button>
               {/*<p>Have An Account? <span onClick={() => setHasAccount(!hasAccount)}>Sign In</span></p>*/}
             </Link>
