@@ -1,4 +1,5 @@
 import "./userHomePage.css";
+import "../RequestPage/Request.css";
 import logo from "./logopic.png";
 import { auth } from "../firebaseconfig/fire2.js";
 import { useNavigate } from "react-router-dom";
@@ -26,7 +27,7 @@ function HomePage() {
               </a>
             </li>
             <li className="nav-item-home">
-              <a href="#" className="nav-link-home">
+              <a href="/userhistory" className="nav-link-home">
                 History
               </a>
             </li>
@@ -53,15 +54,37 @@ function HomePage() {
       {
         // END OF NAVBAR
       }
-      <div className="rowHome">
-        <div className="columnHome">
-          <h1>MY REQUESTS</h1>
-        </div>
-
-        <div className="columnHome">
-          <h1>PENDING</h1>
-        </div>
+      <div className="bannerReq">
+        <h1 className="Req">CONNECTING KNOX, ONE RIDE AT A TIME</h1>
       </div>
+      <table className="homeTable">
+        <thead>
+          <tr>
+            <th>REQUEST A RIDE</th>
+            <th>BECOME A DRIVER</th>
+            <th>CONTACT US</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <br></br>
+              Make Ride requests easily with the hassle free form, click the
+              "Make a Request" to get started!
+            </td>
+            <td>
+              <br></br>
+              Have a car, and want to make a quick buck? Become a Driver now,
+              and schedule driving requests! click "Become a Driver"!
+            </td>
+            <td>
+              <br></br>
+              Have anything you want to let us know about? Head over to the
+              "Contact Us" page above to give us anonymous feedback!
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }

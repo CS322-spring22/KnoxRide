@@ -12,6 +12,8 @@ function App() {
     "/contact",
     "/userrequest",
     "/Register",
+    "/userhistory",
+    "/term",
   ];
   const { pathname } = useLocation();
 
